@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Congo Prime | About Us</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+
+    <link rel="shortcut icon" href="images/favicon-icon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon-icon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+   <style>
+    :root {
+  --about-process-navy: #06345b;
+  --about-process-gold: #c5a000;
+  --about-process-paper: #f5f4ee;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; min-height: 100%; }
+
+body {
+  font-family: "Poppins", "Inter", Arial, sans-serif;
+  background: var(--about-process-paper);
+  color: var(--about-process-navy);
+}
+
+.about-process {
+  position: relative;
+  min-height: 760px;
+  overflow: hidden;
+  background-color: var(--about-process-paper);
+  isolation: isolate;
+}
+
+.about-process::before,
+.about-process::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .18;
+}
+
+.about-process::before {
+  inset: -15% -8%;
+  background: repeating-linear-gradient(105deg, transparent 0 82px, rgba(6,52,91,.06) 83px 84px, transparent 85px 160px), repeating-linear-gradient(15deg, transparent 0 122px, rgba(6,52,91,.035) 123px 124px, transparent 125px 205px);
+  transform: rotate(-4deg);
+}
+
+.about-process::after {
+  width: 480px;
+  height: 280px;
+  right: -30px;
+  bottom: -30px;
+  border: 1px solid rgba(6,52,91,.08);
+  transform: rotate(-15deg) skewY(8deg);
+  box-shadow: 0 0 0 18px rgba(6,52,91,.025), 0 0 0 36px rgba(6,52,91,.02);
+}
+
+.about-process__container { width: min(100%, 1100px); margin: 0 auto; padding: 44px 24px 24px; }
+
+.about-process__diagram { position: relative; width: 100%; max-width: 950px; height: 650px; margin: 0 auto; }
+
+.about-process__center { position: absolute; z-index: 1; left: 50%; top: 50%; width: 270px; height: 270px; transform: translate(-50%, -50%); border-radius: 50%; overflow: hidden; background: #ddd; }
+.about-process__center::after { content: ""; position: absolute; inset: 0; background: rgba(245,244,238,.18); mix-blend-mode: screen; }
+.about-process__center img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(.9) brightness(1.08); }
+
+.about-process__arrows { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; color: var(--about-process-navy); opacity: .98; }
+.about-process__arrows path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+
+.about-process__step { position: absolute; z-index: 2; width: 190px; text-align: center; font-size: 13px; line-height: 1.35; font-weight: 500; }
+.about-process__step p { margin: 10px 0 0; }
+.about-process__icon { display: block; width: 48px; height: 48px; margin: 0 auto; }
+.about-process__icon-gold { fill: var(--about-process-gold); }
+.about-process__icon-navy { fill: var(--about-process-navy); }
+
+.about-process__step--requirements { top: 3%; left: 13%; }
+.about-process__step--concept { top: 3%; right: 12%; }
+.about-process__step--design { top: 36%; right: 0; }
+.about-process__step--proposal { bottom: 12%; right: 11%; }
+.about-process__step--execution { bottom: 0; left: 50%; transform: translateX(-50%); }
+.about-process__step--quality { bottom: 12%; left: 10%; }
+.about-process__step--handover { top: 36%; left: 0; }
+
+.about-process__sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .about-process__container { padding-inline: 10px; }
+  .about-process__diagram { height: 570px; }
+  .about-process__center { width: 230px; height: 230px; }
+  .about-process__step { width: 160px; font-size: 12px; }
+  .about-process__icon { width: 42px; height: 42px; }
+}
+
+@media (max-width: 767px) {
+  .about-process { min-height: 0; }
+  .about-process__container { padding: 34px 20px 50px; }
+  .about-process__diagram { height: auto; max-width: 430px; padding: 0 0 0; display: flex; flex-direction: column; align-items: center; }
+  .about-process__center { position: relative; left: auto; top: auto; transform: none; width: min(72vw, 260px); height: min(72vw, 260px); margin-bottom: 42px; flex: none; }
+  .about-process__arrows { display: none; }
+  .about-process__step { position: relative; inset: auto !important; transform: none !important; width: 100%; max-width: 270px; min-height: 112px; font-size: 13px; }
+  .about-process__step:not(:last-child)::after { content: ""; display: block; width: 30px; height: 24px; margin: 12px auto 0; border-left: 1.8px solid var(--about-process-navy); border-bottom: 1.8px solid var(--about-process-navy); transform: rotate(-45deg) skew(8deg, 8deg); }
+  .about-process__step p { margin-top: 8px; }
+  .about-process__icon { width: 44px; height: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-process *, .about-process *::before, .about-process *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+   </style>
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- Main Header / Header Style Two-->
+        <header class="main-header header-style-five">
+
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+
+                        <!--Top Left-->
+                        <div class="top-left">
+                            <!-- <ul class="links clearfix">
+                                <li><a href="#"><span class="icon fa fa-phone"></span>+ (1800) 456 7890</a></li>
+                                <li><a href="#"><span class="icon fa fa-envelope-o"></span>contact@congoprime.com</a></li>
+                            </ul> -->
+                        </div>
+
+                        <!--Top Right-->
+                        <div class="top-right clearfix">
+                            <!--social-icon-->
+                            <div class="social-icon">
+                                <ul class="clearfix">
+                                    <li>Stay Connected :</li>
+                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Header Top End -->
+
+            <!-- Main Box -->
+
+            <!-- Main Box -->
+            <div class="main-box">
+                <div class="auto-container">
+                    <div class="outer-container clearfix">
+                        <!--Logo Box-->
+                        <div class="logo-box">
+                            <div class="logo"><a href="index.html"><img src="images/congoprime construction.svg"
+                                        height="20%" width="100%" alt=""></a></div>
+                        </div>
+
+                        <!--Nav Outer-->
+                        <div class="nav-outer clearfix">
+
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                        data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current dropdown"><a href="index.html">Home</a>
+                                            <!-- <ul>
+                                            <li><a href="index.html">Home One</a></li>
+                                            <li><a href="index-2.html">Home Two</a></li>
+                                            <li><a href="index-3.html">Home Three</a></li>
+                                            <li><a href="index-4.html">Home Four</a></li>
+                                            <li><a href="index-5.html">Home Five</a></li>
+                                            <li><a href="index-6.html">Home Six</a></li>
+                                            <li><a href="index-7.html">Home Seven</a></li>
+                                            <li class="dropdown"><a href="#">Header Styles</a>
+                                                <ul>
+                                                    <li><a href="index.html">Header Style One</a></li>
+                                                    <li><a href="index-2.html">Header Style Two</a></li>
+                                                    <li><a href="index-3.html">Header Style Three</a></li>
+                                                    <li><a href="index-4.html">Header Style Four</a></li>
+                                                    <li><a href="index-5.html">Header Style Five</a></li>
+                                                    <li><a href="index-6.html">Header Style Six</a></li>
+                                                    <li><a href="index-7.html">Header Style Seven</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul> -->
+                                        </li>
+                                        <li class="#"><a href="about.html">About Us</a>
+                                            <!-- <ul>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="company-overview.html">Company Overview</a></li>
+                                            <li><a href="company-history.html">Company History</a></li>
+                                            <li><a href="#">Team</a></li>
+                                        </ul> -->
+                                        </li>
+                                        <li class="dropdown"><a href="services.html">Services</a>
+                                            <ul>
+                                                <!-- <li><a href="services.html">All Services</a></li> -->
+                                                <li><a href="Commercial-Construction.html">Commercial Construction</a>
+                                                </li>
+                                                <li><a href="Industrial-Construction.html">Industrial Construction</a>
+                                                </li>
+                                                <li><a href="Residential-Construction.html">Residential Construction</a>
+                                                </li>
+                                                <li><a href="Hospitality_projects.html">Hospitality Projects</a></li>
+                                                <li><a href="road-Infrastructure.html">Road & Infrastructure</a></li>
+                                                <li><a href="Architectural-Design.html">Architectural Design</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="projects.html">Projects</a>
+                                            <ul>
+                                                <li><a href="Commercial-projects.html">Commercial</a></li>
+                                                <li><a href="Residential-projects.html">Residential</a></li>
+                                                <li><a href="Industrial-projects.html">Industrial</a></li>
+                                                <li><a href="Hospitality-Projects.html"> Hospitality</a></li>
+                                                <li><a href="Reconstruction-projects.html">Reconstruction</a></li>
+
+
+
+
+
+
+                                            </ul>
+                                        </li>
+                                        <!-- <li class="dropdown"><a href="#">Pages</a>
+                                        <ul>
+                                            <li><a href="error-page.html">404 page</a></li>
+                                            <li><a href="comming-soon.html">Comming Soon page</a></li>
+                                            <li><a href="testimonial.html">Testimonial</a></li>
+                                            <li><a href="faq.html">Faq</a></li>
+                                        </ul>
+                                    </li> -->
+                                        <li class=""><a href="blog.html">Blog</a>
+                                            <!-- <ul>
+                                            <li><a href="blog-sidebar.html">Blog With Sidebar</a></li>
+                                            <li><a href="blog.html">Blog 2 Column</a></li>
+                                            <li><a href="blog-detail.html">Blog Details</a></li>
+                                        </ul> -->
+                                        </li>
+                                        <!-- <li class="dropdown"><a href="#">Shop</a>
+                                        <ul>
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="shoping-cart.html">Cart Page</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="shop-detail.html">Product Detail</a></li>
+                                        </ul>
+                                    </li> -->
+                                        <li class=""><a href="contact-2.html">Contact</a>
+                                            <!-- <ul>
+                                            <li><a href="contact.html">Contact us 1</a></li>
+                                            <li><a href="contact-2.html">Contact us 2</a></li>
+                                        </ul> -->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+                            <div class="outer-box">
+                                <!--Search Box-->
+                                <div class="search-box-outer">
+                                    <div class="dropdown">
+                                        <!-- <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button> -->
+                                        <ul class="dropdown-menu pull-right search-panel"
+                                            aria-labelledby="dropdownMenu3">
+                                            <li class="panel-outer">
+                                                <div class="form-container">
+                                                    <form method="post" action="blog.html">
+                                                        <div class="form-group">
+                                                            <input type="search" name="field-name" value=""
+                                                                placeholder="Search Here" required>
+                                                            <button type="submit" class="search-btn"><span
+                                                                    class="fa fa-search"></span></button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Nav Outer End-->
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="sticky-inner-container clearfix">
+                        <!--Logo-->
+                        <div class="logo pull-left">
+                            <a href="index.html" class="img-responsive"><img src="images/logo-2.png" alt=""
+                                    title=""></a>
+                        </div>
+
+                        <!--Right Col-->
+                        <div class="right-col pull-right">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                        data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current dropdown"><a href="index.html">Home</a>
+                                            <ul>
+                                                <!-- <li><a href="index.html">Home One</a></li>
+                                            <li><a href="index-2.html">Home Two</a></li>
+                                            <li><a href="index-3.html">Home Three</a></li>
+                                            <li><a href="index-4.html">Home Four</a></li>
+                                            <li><a href="index-5.html">Home Five</a></li>
+                                            <li><a href="index-6.html">Home Six</a></li>
+                                            <li><a href="index-7.html">Home Seven</a></li>
+                                            <li class="dropdown"><a href="#">Header Styles</a> -->
+                                                <ul>
+                                                    <!-- <li><a href="index.html">Header Style One</a></li>
+                                                    <li><a href="index-2.html">Header Style Two</a></li>
+                                                    <li><a href="index-3.html">Header Style Three</a></li>
+                                                    <li><a href="index-4.html">Header Style Four</a></li>
+                                                    <li><a href="index-5.html">Header Style Five</a></li>
+                                                    <li><a href="index-6.html">Header Style Six</a></li>
+                                                    <li><a href="index-7.html">Header Style Seven</a></li> -->
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                    </li>
+                                    <li class="#"><a href="about.html">About Us</a>
+                                        <!-- <ul>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="company-overview.html">Company Overview</a></li>
+                                            <li><a href="company-history.html">Company History</a></li>
+                                            <li><a href="#">Team</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="dropdown"><a href="services.html">Services</a>
+                                        <ul>
+                                            <li><a href="Commercial-Construction.html">Commercial Construction</a></li>
+                                            <li><a href="Industrial-Construction.html">Industrial Construction</a></li>
+                                            <li><a href="Residential-Construction.html">Residential Construction</a>
+                                            </li>
+                                            <li><a href="Hospitality_projects.html">Hospitality Projects</a></li>
+                                            <li><a href="road-Infrastructure.html">Interior Design</a></li>
+                                            <li><a href="Architectural-Design.html">Architectural Design</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="projects.html">Projects</a>
+                                        <ul>
+                                            <li><a href="Commercial-projects.html">Commercial</a></li>
+                                            <li><a href="Residential-projects.html">Residential</a></li>
+                                            <li><a href="Industrial-projects.html">Industrial</a></li>
+                                            <li><a href="Hospitality-Projects.html"> Hospitality</a></li>
+                                            <li><a href="Reconstruction-projects.html">Reconstruction</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="dropdown"><a href="#">Pages</a> -->
+                                    <!-- <ul>
+                                            <li><a href="error-page.html">404 page</a></li>
+                                            <li><a href="comming-soon.html">Comming Soon page</a></li>
+                                            <li><a href="testimonial.html">Testimonial</a></li>
+                                            <li><a href="faq.html">Faq</a></li>
+                                        </ul> -->
+                                    <!-- </li> -->
+                                    <li class="#"><a href="blog.html">Blog</a>
+                                        <!-- <ul>
+                                            <li><a href="blog-sidebar.html">Blog With Sidebar</a></li>
+                                            <li><a href="blog.html">Blog 2 Column</a></li>
+                                            <li><a href="blog-detail.html">Blog Details</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <!-- <li class="dropdown"><a href="#">Shop</a>
+                                        <ul>
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="shoping-cart.html">Cart Page</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="shop-detail.html">Product Detail</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <li class="#"><a href="contact-2.html">Contact</a>
+                                        <!-- <ul>
+                                            <li><a href="contact.html">Contact us 1</a></li>
+                                            <li><a href="contact-2.html">Contact us 2</a></li>
+                                        </ul> -->
+                                    </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                            <!--Outer Box-->
+                            <div class="outer-box">
+                                <!--Search Box-->
+                                <div class="search-box-outer">
+                                    <div class="dropdown">
+                                        <!-- <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button> -->
+                                        <ul class="dropdown-menu pull-right search-panel"
+                                            aria-labelledby="dropdownMenu4">
+                                            <li class="panel-outer">
+                                                <div class="form-container">
+                                                    <form method="post" action="blog.html">
+                                                        <div class="form-group">
+                                                            <input type="search" name="field-name" value=""
+                                                                placeholder="Search Here" required>
+                                                            <button type="submit" class="search-btn"><span
+                                                                    class="fa fa-search"></span></button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Sticky Header-->
+
+        </header>
+        <!--End Main Header -->
+
+        <!--Page Title-->
+        <section class="page-title" style="background-image:url(images/background/12.jpg)">
+            <div class="auto-container">
+                <h1>About Us</h1>
+                <ul class="page-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+        </section>
+        <!--End Page Title-->
+
+        <!--Approach Section-->
+        <section class="approach-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!--Content Column-->
+                    <div class="content-column col-md-8 col-sm-12 col-xs-12">
+                        <div class="inner-column">
+                            <div class="sec-title">
+                                <h2>Building Excellence</h2>
+                            </div>
+                            <div class="styled-text">At Congo Prime we believe that every project must be built to last,
+                                with uncompromising quality, integrity, and respect for people and planet.
+                            </div>
+                            <div class="text">
+                                <p>
+                                    Congo Prime is a young, dynamic construction company based in Lubumbashi, DRC,
+                                    delivering industrial, commercial, hospitality, residential and infrastructure
+                                    projects with speed and precision.
+                                </p>
+                                <p>
+                                    Our leadership blends energetic professionals with seasoned industry veterans,
+                                    backed by diversified business interests across Congo and neighbouring countries.
+                                </p>
+
+                                <p>Our core team of engineers, supervisors, architects, and designers ensures every
+                                    project is technically sound, efficiently managed, and aligned with client
+                                    objectives.
+
+
+                                    Through careful planning, meticulous attention to detail, and a focus on cost
+                                    transparency, we deliver results that exceed expectations whether it is a small
+                                    single project or large scale turnkey projects
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Image Column-->
+                    <div class="image-column col-md-4 col-sm-12 col-xs-12">
+                        <div class="inner-column">
+                            <div class="image">
+                                <img src="images/resource/about-us.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--End Approach Section-->
+
+        <!--Fluid Section One-->
+        <section class="fluid-section-one" style="background-image:url(images/resource/)">
+            <div class="outer-container clearfix">
+                <!--Image Column-->
+                <div class="image-column" style="background-image:url(images/resource/vision1.jpg);">
+                    <figure class="image-box"><img src="images/resource/image-3.webp    " alt=""></figure>
+                </div>
+                <!--Content Column-->
+                <div class="content-column">
+                    <div class="inner-column">
+                        <h2>Our vision is to set the benchmark for quality and safety in the construction projects we
+                            undertake, using innovation and disciplined execution to turn ambitious plans into landmark
+                            assets.
+                            <br>
+                        </h2>
+                        <div class="bold-text"></div>
+                        <div class="text">
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!--End Fluid Section One-->
+
+        <!--Contruction Section-->
+
+        <!--End Contruction Section-->
+
+        <!--Testimonial Section-->
+        <section class="testimonial-section">
+            <div class="auto-container">
+                <!--Sec Title Two-->
+                <div class="sec-title-two centered">
+                    <h2>What our client says</h2>
+                </div>
+                <div class="two-item-carousel owl-carousel owl-theme">
+
+                    <!--Testimonial Block-->
+                    <div class="testimonial-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/author-1.jpg" alt="" />
+                            </div>
+                            <div class="text">Leverage agile frameworks to provide a robust synopsis for high level
+                                overviews. Iterative proaches to corporate strategy foster collabo rative thinking to
+                                further the overall value </div>
+                            <div class="author-name">- Michale William</div>
+                            <div class="author-designation">Ceo of Mart</div>
+                        </div>
+                    </div>
+
+                    <!--Testimonial Block-->
+                    <div class="testimonial-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/author-2.jpg" alt="" />
+                            </div>
+                            <div class="text">Leverage agile frameworks to provide a robust synopsis for high level
+                                overviews. Iterative proaches to corporate strategy foster collabo rative thinking to
+                                further the overall value </div>
+                            <div class="author-name">- Michale William</div>
+                            <div class="author-designation">Ceo of Mart</div>
+                        </div>
+                    </div>
+
+                    <!--Testimonial Block-->
+                    <div class="testimonial-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/author-1.jpg" alt="" />
+                            </div>
+                            <div class="text">Leverage agile frameworks to provide a robust synopsis for high level
+                                overviews. Iterative proaches to corporate strategy foster collabo rative thinking to
+                                further the overall value </div>
+                            <div class="author-name">- Michale William</div>
+                            <div class="author-designation">Ceo of Mart</div>
+                        </div>
+                    </div>
+
+                    <!--Testimonial Block-->
+                    <div class="testimonial-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/author-2.jpg" alt="" />
+                            </div>
+                            <div class="text">Leverage agile frameworks to provide a robust synopsis for high level
+                                overviews. Iterative proaches to corporate strategy foster collabo rative thinking to
+                                further the overall value </div>
+                            <div class="author-name">- Michale William</div>
+                            <div class="author-designation">Ceo of Mart</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--End Testimonial Section-->
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="auto-container">
+
+                <!-- Sec Title -->
+                <div class="sec-title">
+                    <h2>The Leadership</h2>
+                    <div class="title">
+                        Meet the experienced leadership team driving our vision, growth, and expansion.
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+
+                    <!-- 1. Nikunj Shah -->
+                    <div class="team-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/nikunj-shah.jpg" alt="Nikunj Shah">
+
+                                <div class="overlay-box">
+                                    <ul class="social-icon-one">
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower-box">
+                                <h3><a href="#">Nikunj Shah</a></h3>
+                                <div class="designation">Chairman</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 2. Mustafa Saiyed -->
+                    <div class="team-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/mustafa-saiyed.jpg" alt="Mustafa Saiyed">
+
+                                <div class="overlay-box">
+                                    <ul class="social-icon-one">
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower-box">
+                                <h3><a href="#">Mustafa Saiyed</a></h3>
+                                <div class="designation">Founder &amp; CEO</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 3. Dilawar Abhavani -->
+                    <div class="team-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/dilawar-abhvani.jpg" alt="Dilawar Abhavani">
+
+                                <div class="overlay-box">
+                                    <ul class="social-icon-one">
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower-box">
+                                <h3><a href="#">Dilawar Abhavani</a></h3>
+                                <div class="designation">Partner</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 4. Viral Shah -->
+                    <div class="team-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/viral-shah.jpg" alt="Viral Shah">
+
+                                <div class="overlay-box">
+                                    <ul class="social-icon-one">
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower-box">
+                                <h3><a href="#">Viral Shah</a></h3>
+                                <div class="designation">VP - Finance</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 5. Jyoti Gill -->
+                    <div class="team-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="images/resource/jyoti-gill.jpg" alt="Jyoti Gill">
+
+                                <div class="overlay-box">
+                                    <ul class="social-icon-one">
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="lower-box">
+                                <h3><a href="#">Jyoti Gill</a></h3>
+                                <div class="designation">Associate Architect</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Team Section -->
+
+
+
+
+
+
+        <!--Renovation Section-->
+        <!-- <section class="renovation-section" style="background-image:url(images/background/drive-us.jpg)">
+            <div class="auto-container">
+                <h3>Great <span>Experience</span> for Building </h3>
+                <h2>Construction & Renovation</h2>
+
+                Quality & Reliability
+
+                Sustainability & Responsibility
+
+                Safety and Integrity
+
+                Value & Efficiency
+
+                Consistency in Delivery
+
+                Partnership Approach
+                <a href="#" class="theme-btn btn-style-one">Contact us now</a>
+            </div>
+        </section> -->
+        <!--End Renovation Section-->
+
+
+        <section class="renovation-section" style="background-image: url(images/background/drive-us.jpg);">
+            <div class="auto-container">
+
+                <!-- Main Heading -->
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            What <span>Drives</span> Us
+                        </h3>
+
+                        <h2>
+                            <!-- Construction & Renovation -->
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- What Drives Us Content -->
+                <div class="row align-items-center mt-4">
+
+                    <!-- Left Column - 3 Points -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="drive-points">
+
+                            <div class="drive-point">
+                                <i class="fa fa-check-circle"></i>
+                                Quality & Reliability
+                            </div>
+
+                            <div class="drive-point">
+                                <i class="fa fa-check-circle"></i>
+                                Sustainability & Responsibility
+                            </div>
+
+                            <div class="drive-point">
+                                <i class="fa fa-check-circle"></i>
+                                Safety and Integrity
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Column - 3 Points -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="drive-points">
+
+                            <div class="drive-point">
+                                <i class="fa fa-check-circle"></i>
+                                Value & Efficiency
+                            </div>
+
+                            <div class="drive-point">
+                                <i class="fa fa-check-circle"></i>
+                                Consistency in Delivery
+                            </div>
+
+                            <div class="drive-point">
+                                <i class="fa fa-check-circle"></i>
+                                Partnership Approach
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <!-- <a href="#" class="theme-btn btn-style-one"> -->
+                        <!-- Contact us now -->
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==============================
+     Our Process Section
+================================== -->
+
+        <!-- ==============================
+     End Our Process Section
+================================== -->
+
+
+       <section class="about-process" aria-labelledby="about-process-title">
+      <h1 id="about-process-title" class="about-process__sr-only">Our project process</h1>
+      <div class="about-process__container">
+        <div class="about-process__diagram">
+          <div class="about-process__center">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Design team reviewing architectural plans">
+          </div>
+
+          <svg class="about-process__arrows" viewBox="0 0 950 650" aria-hidden="true" focusable="false">
+            <defs>
+              <marker id="about-process-arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </marker>
+            </defs>
+            <path d="M 362 125 C 395 103, 430 99, 457 118" marker-end="url(#about-process-arrowhead)" />
+            <path d="M 556 119 C 587 126, 612 147, 620 181" marker-end="url(#about-process-arrowhead)" />
+            <path d="M 696 256 C 704 288, 700 315, 676 339" marker-end="url(#about-process-arrowhead)" />
+            <path d="M 648 421 C 634 448, 610 462, 580 464" marker-end="url(#about-process-arrowhead)" />
+            <path d="M 466 505 C 443 521, 412 521, 388 505" marker-end="url(#about-process-arrowhead)" />
+            <path d="M 285 463 C 258 451, 241 429, 237 400" marker-end="url(#about-process-arrowhead)" />
+            <path d="M 250 332 C 243 303, 250 276, 272 255" marker-end="url(#about-process-arrowhead)" />
+          </svg>
+
+          <article class="about-process__step about-process__step--requirements">
+            <svg class="about-process__icon" viewBox="0 0 48 48" aria-hidden="true"><path class="about-process__icon-gold" d="M11 8h25a5 5 0 0 1 5 5v17a5 5 0 0 1-5 5H23l-8 7v-7h-4a5 5 0 0 1-5-5V13a5 5 0 0 1 5-5Z"/><path class="about-process__icon-navy" d="M15 12h24a4 4 0 0 1 4 4v15a4 4 0 0 1-4 4H25l-7 6v-6h-3a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4Z"/></svg>
+            <p>Understanding Your<br>Requirements</p>
+          </article>
+
+          <article class="about-process__step about-process__step--concept">
+            <svg class="about-process__icon" viewBox="0 0 48 48" aria-hidden="true"><circle class="about-process__icon-gold" cx="13" cy="13" r="5"/><circle class="about-process__icon-gold" cx="25" cy="10" r="5"/><circle class="about-process__icon-gold" cx="37" cy="13" r="5"/><path class="about-process__icon-gold" d="M5 34c1-8 5-12 10-12s9 4 10 12H5Zm15 0c1-10 6-15 12-15s11 5 12 15H20Z"/><path class="about-process__icon-navy" d="M10 36h30v4H10z"/></svg>
+            <p>Initial Concept,<br>Design &amp; Budget Proposal</p>
+          </article>
+
+          <article class="about-process__step about-process__step--design">
+            <svg class="about-process__icon" viewBox="0 0 48 48" aria-hidden="true"><path class="about-process__icon-gold" d="M8 18c4-8 12-12 20-9l7-5 2 10c5 3 6 10 1 15-5 5-10 8-17 8l-8-5-7-1 5-6c-4-2-5-4-3-7Z"/><path class="about-process__icon-navy" d="M23 22c-4 1-7 4-8 9l8 2c2-5 5-7 10-8l-1-7c-3 1-6 2-9 4Z"/><path class="about-process__icon-navy" d="M31 5h9M36 1v8"/></svg>
+            <p>Detailed Design<br>Development</p>
+          </article>
+
+          <article class="about-process__step about-process__step--proposal">
+            <svg class="about-process__icon" viewBox="0 0 48 48" aria-hidden="true"><path class="about-process__icon-gold" d="M12 5h26v38H12z"/><path class="about-process__icon-navy" d="M17 10h16v3H17zm0 9h6v3h-6zm0 10h6v3h-6zm0 9h6v3h-6z"/><path class="about-process__icon-navy" d="m27 20 2 2 5-6 2 2-7 8-4-4zm0 10 2 2 5-6 2 2-7 8-4-4zm0 9 2 2 5-6 2 2-7 8-4-4z"/></svg>
+            <p>Final Proposal, Budget<br>&amp; Timeline</p>
+          </article>
+
+          <article class="about-process__step about-process__step--execution">
+            <svg class="about-process__icon" viewBox="0 0 48 48" aria-hidden="true"><path class="about-process__icon-navy" d="M8 15h22l7 9h5v13H8z"/><path class="about-process__icon-gold" d="M30 15h5l7 9H30z"/><circle class="about-process__icon-gold" cx="16" cy="38" r="5"/><circle class="about-process__icon-gold" cx="36" cy="38" r="5"/><circle class="about-process__icon-navy" cx="16" cy="38" r="2"/><circle class="about-process__icon-navy" cx="36" cy="38" r="2"/></svg>
+            <p>Project Execution</p>
+          </article>
+
+          <article class="about-process__step about-process__step--quality">
+            <svg class="about-process__icon" viewBox="0 0 48 48" aria-hidden="true"><path class="about-process__icon-navy" d="M4 24c7-10 16-15 25-15 8 0 13 5 15 15-5 10-12 15-22 15C13 39 7 34 4 24Z"/><ellipse class="about-process__icon-gold" cx="25" cy="24" rx="9" ry="8"/><circle class="about-process__icon-navy" cx="25" cy="24" r="4"/><path class="about-process__icon-gold" d="m9 34-4 7 9-3z"/></svg>
+            <p>Quality Checks &amp;<br>Site Inspections</p>
+          </article>
+
+          <article class="about-process__step about-process__step--handover">
+            <svg class="about-process__icon" viewBox="0 0 48 48" aria-hidden="true"><path class="about-process__icon-gold" d="M7 32c8-5 14-7 20-6l8 5c-7 6-14 9-24 8Z"/><circle class="about-process__icon-gold" cx="24" cy="12" r="7"/><path class="about-process__icon-navy" d="M5 37c8 2 18 1 29-5l8 3c-10 8-23 11-37 7zm26-23 4-4 3 3-4 4zm8 4 5 1-1 4-5-1z"/></svg>
+            <p>Final Handover /<br>Service &amp; Support</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <!--Main Footer-->
+        <footer class="main-footer" style="background-image:url(images/background/6.jpg)">
+
+            <div class="auto-container">
+
+                <!--Upper Box-->
+                <div class="upper-box">
+                    <ul class="list-style-one clearfix">
+                        <li><span class="icon flaticon-pin"></span>
+                            Avenue Lumumba, Opp. Restaurant italien,
+                            Casa Mia, Lubumbashi, DRC</li>
+                        <li><span class="icon flaticon-envelope-1"></span>Email us : <br> contact@congoprime.com</li>
+                        <li><span class="icon flaticon-technology-2"></span>Call us : <br> + 243 999 999 999</li>
+                    </ul>
+                </div>
+
+                <!--Widgets Section-->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+
+                        <!--big column-->
+                        <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                            <div class="row clearfix">
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                                    <div class="footer-widget logo-widget">
+                                        <div class="logo">
+                                            <a href="index.html"><img src="images/footer-logo.png" alt="" /></a>
+                                        </div>
+                                        <div class="text">Congo Prime is a young, dynamic construction company based in
+                                            Lubumbashi, DRC, delivering industrial, commercial, hospitality, and
+                                            residential projects.</div>
+                                        <ul class="social-icon-two">
+                                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                                    <div class="footer-widget links-widget">
+                                        <h2>Quick Links</h2>
+                                        <div class="widget-content">
+                                            <ul class="list">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="projects.html">Projects</a></li>
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="contact.html">Contact US</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--big column-->
+                        <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                            <div class="row clearfix">
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                    <div class="footer-widget links-widget">
+                                        <h2>Our Services</h2>
+                                        <div class="widget-content">
+                                            <ul class="list">
+                                                <li><a href="Commercial-Construction.html">Commercial Construction</a>
+                                                </li>
+                                                <li><a href="Industrial-Construction.html">Industrial Construction</a>
+                                                </li>
+                                                <li><a href="Residential-Construction.html">Residential Construction</a>
+                                                </li>
+                                                <li><a href="Hospitality-projects-services.html">Hospitality
+                                                        Projects</a></li>
+                                                <li><a href="road-Infrastructure.html">Road & Infrastructure</a></li>
+                                                <li><a href="Architectural-Design.html">Architectural Design</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                    <div class="footer-widget newsletter-widget">
+                                        <h2>Newsletter</h2>
+                                        <div class="widget-content">
+                                            <div class="text">Get our offers & News in your inbox</div>
+                                            <!--Emailed Form-->
+                                            <div class="emailed-form">
+                                                <form method="post" action="contact.html">
+                                                    <div class="form-group">
+                                                        <input type="email" name="email" value=""
+                                                            placeholder="Email address" required>
+                                                        <button type="submit" class="theme-btn">Subscribe now</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="column col-md-6 col-sm-12 col-xs-12">
+                            <div class="copyright">Copyright &copy; SHOUT DESIGNS 2026. All rights reserved. </div>
+                        </div>
+                        <div class="column col-md-6 col-sm-12 col-xs-12">
+                            <!-- <div class="created">Created by: ThemeArc</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Main Footer-->
+
+    </div>
+    <!--End pagewrapper-->
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/mixitup.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+
+</body>
+
+</html>
