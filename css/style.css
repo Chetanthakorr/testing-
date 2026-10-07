@@ -9806,3 +9806,7 @@ body {
 	padding: 20px 0px;
 	margin: -20px 0px;
 }
+
+.home-menu-icon { margin-right: 6px; color: rgb(255, 212, 59); }
+
+@media only screen and (max-width: 767px) { .home-menu-icon { display: none; } }
