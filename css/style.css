@@ -6366,6 +6366,10 @@ img {
 	background: #daa520; color: #313131;
 }
 
+.download-widget .download-box + .download-box {
+	margin-top: 10px;
+}
+
 .download-widget .download-box .icon {
 	position: absolute;
 	right: 20px;

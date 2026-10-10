@@ -12,7 +12,7 @@
 		"Project Planning & Development": "Planification et développement de projets",
 		"Design & Build / Turnkey Solutions": "Conception et réalisation / Solutions clés en main",
 		"Civil & Structural Works": "Travaux de génie civil et de structure",
-		"MEP (Mechanical, Electrical, Plumbing) Solutions": "Solutions MEP (mécanique, électricité, plomberie)",
+		"MEP Solutions": "Solutions MEP (mécanique, électricité, plomberie)",
 		"Site Preparation & Infrastructure Enablement": "Préparation du site et mise en place des infrastructures",
 		"Interior Design, Fit-out & Finishing": "Design intérieur, aménagement et finitions",
 		"Commercial": "Commercial",
@@ -171,7 +171,7 @@
 		"Our Services": "Nos services",
 		"Design,Build & Turnkey solutions": "Conception, construction et solutions cles en main",
 		"Civil & structural works": "Travaux de genie civil et de structure",
-		"MEP (Mechanical, Electrical, Plumbing) solutions.": "Solutions MEP (mecanique, electrique et plomberie).",
+		"MEP Solutions.": "Solutions MEP (mecanique, electrique et plomberie).",
 		"Site preparation & infrastructure enablement": "Preparation du site et mise en place des infrastructures",
 		"We focus on feasibility studies, budgeting, scheduling, and get the necessary approvals to ensure the project is viable for you and compliant before work starts.": "Nous nous concentrons sur les etudes de faisabilite, le budget, le calendrier et les autorisations necessaires afin de garantir la viabilite et la conformite du projet avant le debut des travaux.",
 		"We focus on feasibility studies, budgeting, scheduling, and approvals to ensure the project is viable for you and compliant before work starts.": "Nous nous concentrons sur les etudes de faisabilite, le budget, le calendrier et les autorisations necessaires afin de garantir la viabilite et la conformite du projet avant le debut des travaux.",
@@ -275,7 +275,7 @@
 		,"Our in-house design and interior team makes sure that Interior fit-out and finishing deliver impeccable quality suitable to design aesthetics.": "Notre equipe interne de design et d'interieur veille a ce que l'amenagement et les finitions interieures offrent une qualite impeccable, adaptee a l'esthetique du design."
 		,"For turnkey projects we ensure to incorporate architecture, engineering, and construction under one team, coordinating all departments to Optimize time, cost and quality.": "Pour les projets cles en main, nous reunissons architecture, ingenierie et construction au sein d'une seule equipe afin d'optimiser le temps, les couts et la qualite."
 		,"Design,Build & Turnkey solutions": "Conception, construction et solutions cles en main"
-		,"MEP (Mechanical, Electrical, Plumbing) solutions.": "Solutions MEP (mecanique, electrique et plomberie)."
+		,"MEP Solutions.": "Solutions MEP (mecanique, electrique et plomberie)."
 		,"We recruit code-compliant team to handle power, lighting, HVAC, plumbing, drainage, and fire systems, ensuring all building services are designed, installed & tested to the project requirement.": "Nous mobilisons une equipe conforme aux normes pour gerer l'electricite, l'eclairage, la climatisation, la plomberie, le drainage et les systemes incendie, en veillant a ce que tous les services du batiment soient concus, installes et testes selon les exigences du projet."
 		,"Site preparation & infrastructure enablement": "Preparation du site et mise en place des infrastructures"
 		,"Luxury Motel - 85 Keys": "Motel de luxe - 85 chambres"
