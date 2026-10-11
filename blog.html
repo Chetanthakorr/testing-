@@ -183,9 +183,9 @@
                                     <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
                                         <li class="panel-outer">
                                             <div class="form-container">
-                                                <form method="post" action="blog.html">
+                                                <form class="blog-search-form" method="get" action="blog.html" role="search">
                                                     <div class="form-group">
-                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                        <input type="search" name="q" value="" placeholder="Search Here" aria-label="Search blog posts">
                                                         <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
                                                     </div>
                                                 </form>
@@ -319,9 +319,9 @@
                                     <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu4">
                                         <li class="panel-outer">
                                             <div class="form-container">
-                                                <form method="post" action="blog.html">
+                                                <form class="blog-search-form" method="get" action="blog.html" role="search">
                                                     <div class="form-group">
-                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                        <input type="search" name="q" value="" placeholder="Search Here" aria-label="Search blog posts">
                                                         <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
                                                     </div>
                                                 </form>
@@ -357,29 +357,35 @@
     <section class="blog-page-section">
     	<div class="auto-container">
         	<div class="inner-container">
-                <div class="sidebar-widget sidebar-blog-category blog-category-filter">
+                <!-- <div class="sidebar-widget sidebar-blog-category blog-category-filter">
                     <div class="sidebar-title"><h2>Categories</h2></div>
                     <ul class="cat-list">
                         <li><a href="blog.html" data-category-filter="all">All Blogs</a></li>
-                        <li><a href="blog.html?category=residential-design" data-category-filter="residential-design">Residential Design</a></li>
+                        <li><a href="blog.html?category=construction" data-category-filter="construction">Construction</a></li>
+                        <li><a href="blog.html?category=infrastructure" data-category-filter="infrastructure">Infrastructure</a></li>
+                        <li><a href="blog.html?category=architecture" data-category-filter="architecture">Architecture</a></li>
                         <li><a href="blog.html?category=interior-design" data-category-filter="interior-design">Interior Design</a></li>
-                        <li><a href="blog.html?category=construction-infrastructure" data-category-filter="construction-infrastructure">Construction &amp; Infrastructure</a></li>
+                        <li><a href="blog.html?category=hospitality" data-category-filter="hospitality">Hospitality</a></li>
+                        <li><a href="blog.html?category=residential" data-category-filter="residential">Residential</a></li>
+                        <li><a href="blog.html?category=commercial" data-category-filter="commercial">Commercial</a></li>
                     </ul>
-                </div>
+                </div> -->
+                <!-- <div id="blog-results-message" class="text-center" role="status" aria-live="polite" hidden></div> -->
                 <div class="row clearfix">
                     
                     <!--News Block Three-->
-                    <div class="news-block-three col-md-6 col-sm-12 col-xs-12 blog-card" data-category="residential-design">
+                    <div class="news-block-three col-md-6 col-sm-12 col-xs-12 blog-card" data-categories="architecture interior-design" data-search="Emerging Housing Design Trends in Kolwezi Architecture Interior Design housing layouts villas apartments security-conscious planning utility considerations">
                         <div class="inner-box">
                             <div class="image">
                                 <a href="congo-prime-kolwezi-housing-blog-updated.html"><img src="images/blog/blog1a-lubumbashi.jpg" alt="Modern residential housing in Kolwezi" /></a>
                             </div>
                             <div class="lower-content">
                                 <div class="upper-box clearfix">
-                                    <div class="posted-date pull-left">Updated: 11 October 2026</div>
+                                    <div class="posted-date pull-left">11 Oct 2026</div>
                                     <ul class="post-meta pull-right">
-                                        <li>By: Congo Prime Editorial Team</li>
-                                        <li>Residential Design</li>
+                                        <li>By: Author</li>
+                                        <li><a href="blog.html?category=architecture">Architecture</a></li>
+                                        <li><a href="blog.html?category=interior-design">Interior Design</a></li>
                                     </ul>
                                 </div>
                                 <div class="lower-box">
@@ -392,17 +398,18 @@
                     </div>
                     
                     <!--News Block Three-->
-                    <div class="news-block-three col-md-6 col-sm-12 col-xs-12 blog-card" data-category="construction-infrastructure">
+                    <div class="news-block-three col-md-6 col-sm-12 col-xs-12 blog-card" data-categories="construction infrastructure" data-search="Construction and Infrastructure Development in Lubumbashi Construction Infrastructure transport roads airport mixed-use development urban infrastructure">
                         <div class="inner-box">
                             <div class="image">
                                 <a href="congo-prime-infrastructure-blog-updated.html"><img src="images/blog/blog2-lubumbashi.jpg" alt="Construction and infrastructure development in Lubumbashi" /></a>
                             </div>
                             <div class="lower-content">
                                 <div class="upper-box clearfix">
-                                    <div class="posted-date pull-left">Updated: 11 October 2026</div>
+                                    <div class="posted-date pull-left">11 Oct 2026</div>
                                     <ul class="post-meta pull-right">
-                                        <li>By: Congo Prime Editorial Team</li>
-                                        <li>Construction &amp; Infrastructure</li>
+                                        <li>By: Author</li>
+                                        <li><a href="blog.html?category=construction">Construction</a></li>
+                                        <li><a href="blog.html?category=infrastructure">Infrastructure</a></li>
                                     </ul>
                                 </div>
                                 <div class="lower-box">
@@ -415,17 +422,18 @@
                     </div>
                     
                     <!--News Block Three-->
-                    <div class="news-block-three col-md-6 col-sm-12 col-xs-12 blog-card" data-category="interior-design">
+                    <div class="news-block-three col-md-6 col-sm-12 col-xs-12 blog-card" data-categories="interior-design residential" data-search="10 Points to Keep in Mind While Designing Your Home Interior Interior Design Residential layouts lighting storage furniture colour schemes materials">
                         <div class="inner-box">
                             <div class="image">
                                 <a href="10-points-blog.html"><img src="images/blog/blog-3alubumbashi.jpg" alt="Home interior design with lighting, furniture and storage" /></a>
                             </div>
                             <div class="lower-content">
                                 <div class="upper-box clearfix">
-                                    <div class="posted-date pull-left">Updated: 11 October 2026</div>
+                                    <div class="posted-date pull-left">11 Oct 2026</div>
                                     <ul class="post-meta pull-right">
-                                        <li>By: Congo Prime Editorial Team</li>
-                                        <li>Interior Design</li>
+                                        <li>By: Author</li>
+                                        <li><a href="blog.html?category=interior-design">Interior Design</a></li>
+                                        <li><a href="blog.html?category=residential">Residential</a></li>
                                     </ul>
                                 </div>
                                 <div class="lower-box">
@@ -586,21 +594,7 @@ Casa Mia, Lubumbashi, DRC</li>
 <script src="js/wow.js"></script>
 <script src="js/appear.js"></script>
 <script src="js/script.js"></script>
-<script>
-  (function () {
-    var category = new URLSearchParams(window.location.search).get('category') || 'all';
-    var cards = document.querySelectorAll('.blog-card');
-    var filters = document.querySelectorAll('[data-category-filter]');
-
-    cards.forEach(function (card) {
-      card.style.display = category === 'all' || card.getAttribute('data-category') === category ? '' : 'none';
-    });
-
-    filters.forEach(function (filter) {
-      filter.classList.toggle('active', filter.getAttribute('data-category-filter') === category);
-    });
-  }());
-</script>
+<script src="js/blog.js"></script>
 
 </body>
 </html>
