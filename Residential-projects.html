@@ -738,25 +738,6 @@
     </section>
     <!--End Gallery Section-->
 
-    <script>
-    (function () {
-        var projects = [
-            ['commercial', 'food-town.jpg', 'Food Town - Mixed-Use Development'],
-            ['residential', 'Top-SIG.jpg', 'Top SIG - Luxury Villas'],
-            ['hospitality', 'Hotel-LUC.jpg', 'Hotel Luc - 55 Keys'],
-            ['hospitality', 'Luxury-Motel.jpg', 'Luxury Motel - 85 Keys']
-        ];
-        var list = document.querySelector('.filter-list');
-        list.innerHTML = projects.map(function (project) {
-            var image = 'images/projects/' + project[0] + '/' + project[1];
-            return '<div class="gallery-item mix all ' + project[0] + ' col-lg-3 col-md-4 col-sm-6 col-xs-12">' +
-                '<div class="inner-box"><div class="image"><img src="' + image + '" alt="' + project[2] + '" />' +
-                '<div class="overlay-box"><a href="projects-detail.html" class="overlay-link"></a><div class="content">' +
-                '<h3><a href="projects-detail.html">' + project[2] + '</a></h3></div></div></div></div></div>';
-        }).join('');
-    }());
-    </script>
-    
     <!--Main Footer-->
     <footer class="main-footer" style="background-image:url(images/background/6.jpg)">
 

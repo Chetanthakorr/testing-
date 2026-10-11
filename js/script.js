@@ -865,7 +865,27 @@
 	
 	//Gallery Filters
 	if($('.filter-list').length){
-		$('.filter-list').mixItUp({});
+		var $projectGallery = $('.filter-list');
+		var projectPage = window.location.pathname.split('/').pop().toLowerCase();
+		var projectFilters = {
+			'projects.html': 'all',
+			'commercial-projects.html': '.commercial',
+			'residential-projects.html': '.residential',
+			'industrial-projects.html': '.industrial',
+			'hospitality-projects.html': '.hospitality',
+			'reconstruction-projects.html': '.reconstruction'
+		};
+		var initialProjectFilter = projectFilters[projectPage] || 'all';
+
+		$projectGallery.mixItUp({
+			load: {
+				filter: initialProjectFilter
+			}
+		});
+
+		$('.mixitup-gallery .filter-btns li').removeClass('active')
+			.filter('[data-filter="' + initialProjectFilter + '"]')
+			.addClass('active');
 	}
 	
 	
