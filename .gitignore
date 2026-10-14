@@ -1,0 +1,15 @@
+# SSH keys / secrets — never commit
+congoprime_key
+congoprime_key.pub
+*.pem
+*_key
+*_key.pub
+id_rsa*
+id_ed25519*
+
+# Scripts / local tooling
+serve.ps1
+
+# OS / editor junk
+.DS_Store
+Thumbs.db

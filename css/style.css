@@ -855,6 +855,14 @@ img {
 	opacity: 0.80;
 }
 
+.social-svg {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	vertical-align: -0.125em;
+	display: inline-block;
+}
+
 /*Main Box*/
 
 .main-header .main-box {
