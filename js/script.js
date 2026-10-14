@@ -876,9 +876,13 @@
 		};
 		var initialProjectFilter = projectFilters[projectPage] || 'all';
 
+		// Each category page's inline script already renders only its own
+		// category, so load mixitup with 'all' (show whatever is present).
+		// Applying a category filter here races with the dynamic render and
+		// can hide the cards. The active tab is still set from the page below.
 		$projectGallery.mixItUp({
 			load: {
-				filter: initialProjectFilter
+				filter: 'all'
 			}
 		});
 
