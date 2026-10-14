@@ -865,14 +865,14 @@
 	//Gallery Filters
 	if($('.filter-list').length){
 		var $projectGallery = $('.filter-list');
-		var projectPage = window.location.pathname.split('/').pop().toLowerCase();
+		var projectPage = window.location.pathname.split('/').pop().toLowerCase().replace(/\.html$/, '');
 		var projectFilters = {
-			'projects.html': 'all',
-			'commercial-projects.html': '.commercial',
-			'residential-projects.html': '.residential',
-			'industrial-projects.html': '.industrial',
-			'hospitality-projects.html': '.hospitality',
-			'reconstruction-projects.html': '.reconstruction'
+			'projects': 'all',
+			'commercial-projects': '.commercial',
+			'residential-projects': '.residential',
+			'industrial-projects': '.industrial',
+			'hospitality-projects': '.hospitality',
+			'reconstruction-projects': '.reconstruction'
 		};
 		var initialProjectFilter = projectFilters[projectPage] || 'all';
 
