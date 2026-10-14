@@ -875,20 +875,27 @@
 			'reconstruction-projects': '.reconstruction'
 		};
 		var initialProjectFilter = projectFilters[projectPage] || 'all';
+		var projectPageLinks = {
+			'all': 'projects.html',
+			'.commercial': 'Commercial-projects.html',
+			'.residential': 'Residential-projects.html',
+			'.industrial': 'Industrial-projects.html',
+			'.hospitality': 'Hospitality-Projects.html',
+			'.reconstruction': 'Reconstruction-projects.html'
+		};
 
-		// Each category page's inline script already renders only its own
-		// category, so load mixitup with 'all' (show whatever is present).
-		// Applying a category filter here races with the dynamic render and
-		// can hide the cards. The active tab is still set from the page below.
-		$projectGallery.mixItUp({
-			load: {
-				filter: 'all'
-			}
-		});
-
+		// Each project page's inline script renders exactly the cards it needs,
+		// so we don't filter with mixitup (it raced with the dynamic render and
+		// hid the cards online). Highlight the active tab and let the tabs
+		// navigate to each category's own page.
 		$('.mixitup-gallery .filter-btns li').removeClass('active')
 			.filter('[data-filter="' + initialProjectFilter + '"]')
 			.addClass('active');
+
+		$('.mixitup-gallery .filter-btns li').css('cursor', 'pointer').on('click', function () {
+			var target = projectPageLinks[$(this).attr('data-filter')];
+			if (target) { window.location.href = target; }
+		});
 	}
 	
 	
