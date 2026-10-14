@@ -1450,6 +1450,7 @@ img {
 
 /*Sticky Header*/
 .language-toggle {
+	display: none !important;
 	float: left;
 	margin: 22px 0 0 20px;
 	padding: 5px 8px;

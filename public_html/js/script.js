@@ -396,7 +396,8 @@
 	}
 
 	function languageSwitcher() {
-		var language = localStorage.getItem('site-language') || 'en';
+		var language = 'en';
+		localStorage.setItem('site-language', language);
 		var toggle = '<button type="button" class="language-toggle" aria-label="Switch language" aria-pressed="false">' +
 			'<span class="language-english is-active">EN</span><span class="language-divider">|</span><span class="language-french">FR</span></button>';
 		$('.main-header .nav-outer').each(function() {
@@ -413,9 +414,7 @@
 			$('body').append('<div class="language-toggle-fallback">' + toggle + '</div>');
 		}
 		$(document).on('click', '.language-toggle', function() {
-			language = language === 'en' ? 'fr' : 'en';
-			localStorage.setItem('site-language', language);
-			translatePage(language);
+			return false;
 		});
 		translatePage(language);
 	}
