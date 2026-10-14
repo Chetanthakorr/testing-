@@ -3190,6 +3190,10 @@ img {
 	margin-bottom: 8px;
 }
 
+.main-footer .links-widget .list li:last-child {
+	margin-bottom: 0px;
+}
+
 .main-footer .links-widget .list li a {
 	position: relative;
 	color: #cccccc;
@@ -6154,13 +6158,27 @@ img {
 	border: 1px solid #e5e5e5;
 }
 
+/* Equal-height cards so all blocks fill the row uniformly (no bottom gap) */
+.featured-blocks > .clearfix {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.featured-blocks > .clearfix::before,
+.featured-blocks > .clearfix::after {
+	display: none;
+}
+
 .featured-blocks .featured-block {
 	position: relative;
 	padding: 0px;
+	display: flex;
 }
 
 .featured-block .inner-box {
 	position: relative;
+	width: 100%;
 	text-align: center;
 	padding: 30px 19px 40px;
 	background-color: #fafafa;
