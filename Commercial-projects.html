@@ -755,9 +755,7 @@
                     '<div class="overlay-box"><a href="' + project.detail + '" class="overlay-link"></a><div class="content">' +
                     '<h3><a href="' + project.detail + '">' + project.title + '</a></h3></div></div></div></div></div>';
             };
-            document.querySelector('.filter-list').innerHTML = projects.filter(function (project) {
-                return project.category === 'commercial';
-            }).map(card).join('');
+            document.querySelector('.filter-list').innerHTML = projects.map(card).join('');
         }());
     </script>
 
