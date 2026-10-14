@@ -405,14 +405,13 @@
 			'commercial-construction.html': 2,
 			'industrial-construction.html': 2,
 			'residential-construction.html': 2,
-			'hospitality-projects.html': 2,
+			'hospitality-projects.html': 3,
 			'road-infrastructure.html': 2,
 			'architectural-design.html': 2,
 			'projects.html': 3,
 			'commercial-projects.html': 3,
 			'residential-projects.html': 3,
 			'industrial-projects.html': 3,
-			'hospitality_projects.html': 3,
 			'reconstruction-projects.html': 3,
 			'projects-detail.html': 3,
 			'blog.html': 4,
@@ -555,7 +554,7 @@
 	//Product Carousel
 	if ($('.project-carousel').length) {
 		$('.project-carousel').owlCarousel({
-			loop:true,
+			loop:false,
 			margin:30,
 			nav:true,
 			smartSpeed: 700,

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Congo Prime | MEP Solutions</title>
+<title>Congo Prime | Hospitality Projects</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -346,10 +346,11 @@
     <!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/12.jpg)">
     	<div class="auto-container">
-        	<h1>MEP Solutions</h1>
+        	<h1>Hospitality Projects</h1>
             <ul class="page-breadcrumb">
             	<li><a href="index.html">Home</a></li>
-                <li>MEP Solutions</li>
+                <li><a href="projects.html">Projects</a></li>
+                <li>Hospitality Projects</li>
             </ul>
         </div>
     </section>
@@ -737,6 +738,23 @@
         </div>
     </section>
     <!--End Gallery Section-->
+
+    <script>
+        (function () {
+            var projects = [
+                { category: 'hospitality', image: 'Hotel-LUC.jpg', title: 'Hotel Luc - 55 Keys', detail: 'hotel-luc-project.html' },
+                { category: 'hospitality', image: 'Luxury-Motel.jpg', title: 'Luxury Motel - 85 Keys', detail: 'luxury-hotel-project.html' }
+            ];
+            var card = function (project) {
+                var image = 'images/projects/' + project.category + '/' + project.image;
+                return '<div class="gallery-item mix all ' + project.category + ' col-lg-3 col-md-4 col-sm-6 col-xs-12">' +
+                    '<div class="inner-box"><div class="image"><img src="' + image + '" alt="' + project.title + '">' +
+                    '<div class="overlay-box"><a href="' + project.detail + '" class="overlay-link"></a><div class="content">' +
+                    '<h3><a href="' + project.detail + '">' + project.title + '</a></h3></div></div></div></div></div>';
+            };
+            document.querySelector('.filter-list').innerHTML = projects.map(card).join('');
+        }());
+    </script>
 
     <!--Main Footer-->
     <footer class="main-footer" style="background-image:url(images/background/6.jpg)">

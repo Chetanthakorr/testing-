@@ -2280,23 +2280,30 @@
         <script>
             (function () {
                 var projects = [
-                    ['commercial', 'food-town.jpg', 'Food Town - Mixed-Use Development'],
-                    ['residential', 'Top-SIG.jpg', 'Top SIG - Luxury Villas'],
-                    ['hospitality', 'Hotel-LUC.jpg', 'Hotel Luc - 55 Keys'],
-                    ['hospitality', 'Luxury-Motel.jpg', 'Luxury Motel - 85 Keys']
+                    { id: 'food-town', category: 'commercial', image: 'food-town.jpg', title: 'Food Town - Mixed-Use Development', detail: 'food-towne-project.html' },
+                    { id: 'top-sig', category: 'residential', image: 'Top-SIG.jpg', title: 'Top SIG - Luxury Villas', detail: 'top-sig-project.html' },
+                    { id: 'villa-4', category: 'residential', image: 'villa-new1.jpg', title: 'Villa 4', detail: 'villa-project.html' },
+                    { id: 'hotel-luc', category: 'hospitality', image: 'Hotel-LUC.jpg', title: 'Hotel Luc - 55 Keys', detail: 'hotel-luc-project.html' },
+                    { id: 'luxury-motel', category: 'hospitality', image: 'Luxury-Motel.jpg', title: 'Luxury Motel - 85 Keys', detail: 'luxury-hotel-project.html' }
                 ];
                 var categories = ['commercial', 'residential', 'industrial', 'hospitality', 'reconstruction'];
+                var uniqueProjects = projects.filter(function (project, index, allProjects) {
+                    return index === allProjects.findIndex(function (candidate) {
+                        return candidate.id === project.id;
+                    });
+                });
                 var section = document.querySelector('.project-sectio-two');
                 var tabContent = section.querySelector('.p-tabs-content');
                 var label = function (category) {
                     return category.charAt(0).toUpperCase() + category.slice(1);
                 };
                 var item = function (project) {
-                    var image = 'images/projects/' + project[0] + '/' + project[1];
+                    var image = 'images/projects/' + project.category + '/' + project.image;
+                    var detailUrl = project.detail;
                     return '<div class="gallery-item-three"><div class="inner-box"><figure class="image-box">' +
-                        '<img src="' + image + '" alt="' + project[2] + '"><div class="overlay-box"><div class="overlay-inner"><div class="content">' +
-                        '<a href="projects-detail.html" class="link"><span class="icon flaticon-unlink"></span></a></div></div></div></figure>' +
-                        '<h3><a href="projects-detail.html">' + project[2] + '</a></h3><div class="designation">' + label(project[0]) + '</div></div></div>';
+                        '<img src="' + image + '" alt="' + project.title + '"><div class="overlay-box"><div class="overlay-inner"><div class="content">' +
+                        '<a href="' + detailUrl + '" class="link" data-project-id="' + project.id + '"><span class="icon flaticon-unlink"></span></a></div></div></div></figure>' +
+                        '<h3><a href="' + detailUrl + '" data-project-id="' + project.id + '">' + project.title + '</a></h3><div class="designation">' + label(project.category) + '</div></div></div>';
                 };
                 var panel = function (id, records, active) {
                     return '<div class="p-tab' + (active ? ' active-tab' : '') + '" id="p-tab-' + id + '"><div class="project-carousel owl-theme owl-carousel">' +
@@ -2305,8 +2312,8 @@
                 section.querySelector('.product-tab-btns').innerHTML = ['All'].concat(categories.map(label)).map(function (name, index) {
                     return '<li class="p-tab-btn' + (index === 0 ? ' active-btn' : '') + '" data-tab="#p-tab-' + (index + 1) + '">' + name + '</li>';
                 }).join('');
-                tabContent.innerHTML = panel(1, projects, true) + categories.map(function (category, index) {
-                    return panel(index + 2, projects.filter(function (project) { return project[0] === category; }), false);
+                tabContent.innerHTML = panel(1, uniqueProjects, true) + categories.map(function (category, index) {
+                    return panel(index + 2, uniqueProjects.filter(function (project) { return project.category === category; }), false);
                 }).join('');
             }());
         </script>

@@ -349,6 +349,7 @@
         	<h1>Residential Projects</h1>
             <ul class="page-breadcrumb">
             	<li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li>Residential Projects</li>
             </ul>
         </div>
@@ -737,6 +738,23 @@
         </div>
     </section>
     <!--End Gallery Section-->
+
+    <script>
+        (function () {
+            var projects = [
+                { category: 'residential', image: 'Top-SIG.jpg', title: 'Top SIG - Luxury Villas', detail: 'top-sig-project.html' },
+                { category: 'residential', image: 'villa-new1.jpg', title: 'Villa 4', detail: 'villa-project.html' }
+            ];
+            var card = function (project) {
+                var image = 'images/projects/' + project.category + '/' + project.image;
+                return '<div class="gallery-item mix all ' + project.category + ' col-lg-3 col-md-4 col-sm-6 col-xs-12">' +
+                    '<div class="inner-box"><div class="image"><img src="' + image + '" alt="' + project.title + '">' +
+                    '<div class="overlay-box"><a href="' + project.detail + '" class="overlay-link"></a><div class="content">' +
+                    '<h3><a href="' + project.detail + '">' + project.title + '</a></h3></div></div></div></div></div>';
+            };
+            document.querySelector('.filter-list').innerHTML = projects.map(card).join('');
+        }());
+    </script>
 
     <!--Main Footer-->
     <footer class="main-footer" style="background-image:url(images/background/6.jpg)">
