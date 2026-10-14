@@ -743,8 +743,7 @@
         (function () {
             var projects = [
                 { category: 'commercial', image: 'food-town.jpg', title: 'Food Town - Mixed-Use Development', detail: 'food-towne-project.html' },
-                { category: 'residential', image: 'Top-SIG.jpg', title: 'Top SIG - Luxury Villas', detail: 'top-sig-project.html' },
-                { category: 'residential', image: 'villa-new1.jpg', title: 'Villa 4', detail: 'villa-project.html' },
+                { category: 'residential', image: 'Top-SIG.jpg', title: 'Top SIG - Luxury Villas', detail: 'villa-project.html' },
                 { category: 'hospitality', image: 'Hotel-LUC.jpg', title: 'Hotel Luc - 55 Keys', detail: 'hotel-luc-project.html' },
                 { category: 'hospitality', image: 'Luxury-Motel.jpg', title: 'Luxury Motel - 85 Keys', detail: 'luxury-hotel-project.html' }
             ];
@@ -755,7 +754,7 @@
                     '<div class="overlay-box"><a href="' + project.detail + '" class="overlay-link"></a><div class="content">' +
                     '<h3><a href="' + project.detail + '">' + project.title + '</a></h3></div></div></div></div></div>';
             };
-            document.querySelector('.filter-list').innerHTML = projects.map(card).join('');
+            document.querySelector('.filter-list').innerHTML = projects.filter(function (p) { return p.category === 'residential'; }).map(card).join('');
         }());
     </script>
 
@@ -891,7 +890,7 @@ Casa Mia, Lubumbashi, DRC</li>
 <script src="js/owl.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/appear.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.js?v=20261014"></script>
 
 </body>
 </html>
