@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <title>Congo Prime | Default Page</title>
-        <link rel="shortcut icon" href="images/favicon-icon.png" type="image/x-icon">
-        <link rel="icon" href="images/favicon-icon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="images/favicon-icon.webp" type="image/x-icon">
+        <link rel="icon" href="images/favicon-icon.webp" type="image/x-icon">
         <meta charset="utf-8">
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta content="Default page" name="description">

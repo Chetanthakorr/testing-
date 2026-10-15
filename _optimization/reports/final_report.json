@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-15T16:55:52",
+  "total_assets_scanned": 187,
+  "images_converted_to_webp": 113,
+  "conversion_failures": 0,
+  "conversion_skipped": 13,
+  "original_total_kb": 48438.4,
+  "webp_total_kb": 4559.9,
+  "size_saved_kb": 43878.5,
+  "size_saved_pct": 78.5,
+  "confirmed_unused_quarantined": 46,
+  "duplicate_groups": 3,
+  "broken_references_post_migration": 1274,
+  "valid_references": 2076,
+  "files_updated": 71,
+  "rollback": "git -C D:/prime-main checkout main",
+  "remaining_manual_tasks": [
+    "Browser-test all pages visually",
+    "Verify slider/gallery/lightbox rendering",
+    "Review category B assets in unused-assets-candidates.csv",
+    "Review git-deleted files (shown as D in git status) - not on disk",
+    "Sign off and permanently delete _optimization/quarantine/ when safe",
+    "Review public_html/ and store/ if deployed separately"
+  ]
+}
