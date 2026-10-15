@@ -8,7 +8,12 @@ id_rsa*
 id_ed25519*
 
 # Scripts / local tooling
+# The live server syncs this whole repo and serves it as-is, so anything
+# tracked here is public on congoprime.com.
 serve.ps1
+_optimization/
+.claude/
+.vscode/
 
 # OS / editor junk
 .DS_Store
