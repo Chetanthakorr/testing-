@@ -1,0 +1,1614 @@
+{
+  "index.html": {
+    "status": 200,
+    "assets_checked": 139,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/building-maintenance.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/4.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/gallery/17.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/gallery/18.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/gallery/19.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/gallery/20.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/gallery/21.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/testy-blue (1).png",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/testy-yellow (1).png",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "about.html": {
+    "status": 200,
+    "assets_checked": 84,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/testy-blue (1).png",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/testy-yellow (1).png",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "services.html": {
+    "status": 200,
+    "assets_checked": 85,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/building-maintenance.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Civil-Structural-Works.html": {
+    "status": 200,
+    "assets_checked": 59,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      }
+    ]
+  },
+  "Design-Build-Turnkey-Solutions.html": {
+    "status": 200,
+    "assets_checked": 79,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Interior-Design-Fit-out-Finishing.html": {
+    "status": 200,
+    "assets_checked": 79,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "MEP.html": {
+    "status": 200,
+    "assets_checked": 79,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Project-Planning-Development.html": {
+    "status": 200,
+    "assets_checked": 79,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Site-Preparation-Infrastructure-Enablement.html": {
+    "status": 200,
+    "assets_checked": 59,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      }
+    ]
+  },
+  "projects.html": {
+    "status": 200,
+    "assets_checked": 99,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Commercial-projects.html": {
+    "status": 200,
+    "assets_checked": 99,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Hospitality-Projects.html": {
+    "status": 200,
+    "assets_checked": 99,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Industrial-projects.html": {
+    "status": 200,
+    "assets_checked": 99,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Reconstruction-projects.html": {
+    "status": 200,
+    "assets_checked": 99,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "Residential-projects.html": {
+    "status": 200,
+    "assets_checked": 99,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "projects-detail.html": {
+    "status": 200,
+    "assets_checked": 76,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "blog.html": {
+    "status": 200,
+    "assets_checked": 87,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "blog-detail.html": {
+    "status": 200,
+    "assets_checked": 79,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/author-3.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/news-11.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/post-thumb-1.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/post-thumb-2.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/post-thumb-3.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/resource/post-thumb-4.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/team.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  },
+  "10-points-blog.html": {
+    "status": 200,
+    "assets_checked": 71,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      }
+    ]
+  },
+  "congo-prime-infrastructure-blog-updated.html": {
+    "status": 200,
+    "assets_checked": 71,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      }
+    ]
+  },
+  "congo-prime-kolwezi-housing-blog-updated.html": {
+    "status": 200,
+    "assets_checked": 70,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      }
+    ]
+  },
+  "contact-2.html": {
+    "status": 200,
+    "assets_checked": 73,
+    "assets_failed": [
+      {
+        "url": "http://127.0.0.1:8799/blog-sidebar.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/checkout.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/comming-soon.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-history.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/company-overview.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/faq.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/6.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/background/process-bg.jpg",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/images/congoprime construction.svg",
+        "status": -1
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-2.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-3.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-4.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-5.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-6.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/index-7.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop-detail.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shop.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/shoping-cart.html",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:8799/testimonial.html",
+        "status": 404
+      }
+    ]
+  }
+}
