@@ -8,9 +8,16 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="plugins/revolution/css/settings.css" rel="stylesheet" type="text/css">
     <!-- REVOLUTION SETTINGS STYLES -->
-    <link href="plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-    <link href="plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css">
+    <link href="plugins/revolution/css/layers.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="plugins/revolution/css/layers.css" rel="stylesheet"></noscript><!-- REVOLUTION LAYERS STYLES -->
+    <link href="plugins/revolution/css/navigation.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="plugins/revolution/css/navigation.css" rel="stylesheet"></noscript>
     <!-- REVOLUTION NAVIGATION STYLES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Open+Sans:wght@300;400;700&family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+    <link href="css/owl.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="css/jquery.fancybox.min.css" rel="stylesheet"></noscript>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <style>
@@ -115,7 +122,8 @@
     </style>
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Congo Prime is a young, dynamic construction company based in Lubumbashi, DRC, delivering industrial, commercial, hospitality, residential and infrastructure projects with speed and precision.">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
@@ -170,7 +178,7 @@
                         <!--Logo Box-->
                         <div class="logo-box">
                             <div class="logo"><a href="index.html"><img src="images/logo-2.webp" height="20%"
-                                        width="100%" alt=""></a></div>
+                                        width="100%" alt="Congo Prime Construction"></a></div>
                         </div>
 
                         <!--Nav Outer-->
@@ -180,7 +188,7 @@
                             <nav class="main-menu">
                                 <div class="navbar-header">
                                     <!-- Toggle Button -->
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    <button type="button" class="navbar-toggle" aria-label="Toggle navigation" data-toggle="collapse"
                                         data-target=".navbar-collapse">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
@@ -318,7 +326,7 @@
                     <div class="sticky-inner-container clearfix">
                         <!--Logo-->
                         <div class="logo pull-left">
-                            <a href="index.html" class="img-responsive"><img src="images/logo-2.webp" alt=""
+                            <a href="index.html" class="img-responsive"><img src="images/logo-2.webp" alt="Congo Prime Construction"
                                     title=""></a>
                         </div>
 
@@ -328,7 +336,7 @@
                             <nav class="main-menu">
                                 <div class="navbar-header">
                                     <!-- Toggle Button -->
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    <button type="button" class="navbar-toggle" aria-label="Toggle navigation" data-toggle="collapse"
                                         data-target=".navbar-collapse">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
@@ -455,6 +463,7 @@
             <!--End Sticky Header-->
 
         </header>
+        <main id="main-content">
         <!--End Main Header -->
 
         <!--Main Slider-->
@@ -472,7 +481,7 @@
                             data-rotate="0" data-saveperformance="off" data-slotamount="default"
                             data-thumb="images/main-slider/image-10.webp" data-title="Slide Title"
                             data-transition="parallaxvertical">
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
+                            <img alt="" class="rev-slidebg" fetchpriority="high" data-bgfit="cover" data-bgparallax="10"
                                 data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
                                 src="images/main-slider/banner-1.webp">
                             <div class="banner-yellow-overlay" aria-hidden="true"></div>
@@ -528,7 +537,7 @@
                             data-transition="parallaxvertical">
                             <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
                                 data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
-                                src="images/main-slider/banner-3.webp">
+                                src="plugins/revolution/assets/dummy.png" data-lazyload="images/main-slider/banner-3.webp">
                             <div class="banner-yellow-overlay" aria-hidden="true"></div>
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
@@ -586,7 +595,7 @@
                             data-transition="parallaxvertical">
                             <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
                                 data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
-                                src="images/main-slider/banner-2.webp">
+                                src="plugins/revolution/assets/dummy.png" data-lazyload="images/main-slider/banner-2.webp">
                             <div class="banner-blue-overlay" aria-hidden="true"></div>
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
@@ -636,7 +645,7 @@
                             data-transition="parallaxvertical">
                             <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
                                 data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
-                                src="images/main-slider/banner-4.webp">
+                                src="plugins/revolution/assets/dummy.png" data-lazyload="images/main-slider/banner-4.webp">
                             <div class="banner-yellow-overlay" aria-hidden="true"></div>
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
@@ -714,7 +723,7 @@
                     <!--Image Column-->
                     <div class="image-column col-md-5 col-sm-12 col-xs-12">
                         <div class="image">
-                            <img src="images/resource/service-4.webp" alt="" />
+                            <img loading="lazy" decoding="async" src="images/resource/service-4.webp" alt="" />
                         </div>
                     </div>
 
@@ -760,7 +769,7 @@
                     <div class="service-block-three col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
                             <div class="image">
-                                <a href="Commercial-projects.html"><img src="images/resource/s-1.webp" alt="" /></a>
+                                <a href="Commercial-projects.html"><img loading="lazy" decoding="async" src="images/resource/s-1.webp" alt="Commercial Construction" /></a>
                             </div>
                             <div class="lower-content">
                                 <h3><a href="Commercial-projects.html">Commercial Construction</a></h3>
@@ -776,7 +785,7 @@
                     <div class="service-block-three col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
                             <div class="image">
-                                <a href="Industrial-projects.html"><img src="images/resource/s-2.webp" alt="" /></a>
+                                <a href="Industrial-projects.html"><img loading="lazy" decoding="async" src="images/resource/s-2.webp" alt="Industrial Construction" /></a>
                             </div>
                             <div class="lower-content">
                                 <h3><a href="Industrial-projects.html">Industrial Construction</a></h3>
@@ -793,7 +802,7 @@
                     <div class="service-block-three col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
                             <div class="image">
-                                <a href="Residential-projects.html"><img src="images/resource/s-3.webp" alt="" /></a>
+                                <a href="Residential-projects.html"><img loading="lazy" decoding="async" src="images/resource/s-3.webp" alt="Residential Construction" /></a>
                             </div>
                             <div class="lower-content">
                                 <h3><a href="Residential-projects.html">Residential Construction</a></h3>
@@ -809,7 +818,7 @@
                     <div class="service-block-three col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
                             <div class="image">
-                                <a href="Hospitality-Projects.html"><img src="images/resource/s-4.webp" alt="" /></a>
+                                <a href="Hospitality-Projects.html"><img loading="lazy" decoding="async" src="images/resource/s-4.webp" alt="Hospitality Projects" /></a>
                             </div>
                             <div class="lower-content">
                                 <h3><a href="Hospitality-Projects.html">Hospitality Projects</a></h3>
@@ -825,7 +834,7 @@
                     <div class="service-block-three col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
                             <div class="image">
-                                <a href="Site-Preparation-Infrastructure-Enablement.html"><img src="images/resource/road.webp" alt="" /></a>
+                                <a href="Site-Preparation-Infrastructure-Enablement.html"><img loading="lazy" decoding="async" src="images/resource/road.webp" alt="Road &amp; Infrastructure" /></a>
                             </div>
                             <div class="lower-content">
                                 <h3><a href="Site-Preparation-Infrastructure-Enablement.html">Road & Infrastructure</a></h3>
@@ -842,7 +851,7 @@
                     <div class="service-block-three col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
                             <div class="image">
-                                <a href="Design-Build-Turnkey-Solutions.html"><img src="images/resource/s-6.webp" alt="" /></a>
+                                <a href="Design-Build-Turnkey-Solutions.html"><img loading="lazy" decoding="async" src="images/resource/s-6.webp" alt="Architectural Design" /></a>
                             </div>
                             <div class="lower-content">
                                 <h3><a href="Design-Build-Turnkey-Solutions.html">Architectural Design   </a></h3>
@@ -879,7 +888,7 @@ overall interior scheme.</div>
                                 <div class="flipper">
                                     <div class="front">
                                         <div class="icon-box">
-                                            <span class="icon"><img src="images/icons/icon-1.svg" alt="" /></span>
+                                            <span class="icon"><img loading="lazy" decoding="async" src="images/icons/icon-1.svg" alt="" /></span>
                                         </div>
                                         <h3>Project planning &
                                             development</h3>
@@ -920,7 +929,7 @@ overall interior scheme.</div>
                                 <div class="flipper">
                                     <div class="front">
                                         <div class="icon-box">
-                                            <span class="icon"><img src="images/icons/icon-2.svg" alt="" /></span>
+                                            <span class="icon"><img loading="lazy" decoding="async" src="images/icons/icon-2.svg" alt="" /></span>
                                         </div>
                                         <h3>Design, Build & Turnkey solutions</h3>
                                         <div class="text">For turnkey projects we ensure to incorporate architecture,
@@ -956,7 +965,7 @@ overall interior scheme.</div>
                                 <div class="flipper">
                                     <div class="front">
                                         <div class="icon-box">
-                                            <span class="icon"><img src="images/icons/icon-3.svg" alt="" /></span>
+                                            <span class="icon"><img loading="lazy" decoding="async" src="images/icons/icon-3.svg" alt="" /></span>
                                         </div>
                                         <h3>Civil and <br> structural works</h3>
                                         <div class="text">From foundations and retaining walls to steel structures,
@@ -991,7 +1000,7 @@ overall interior scheme.</div>
                                 <div class="flipper">
                                     <div class="front">
                                         <div class="icon-box">
-                                            <span class="icon"><img src="images/icons/icon-4.svg" alt="" /></span>
+                                            <span class="icon"><img loading="lazy" decoding="async" src="images/icons/icon-4.svg" alt="" /></span>
                                         </div>
                                         <h3>MEP (Mech. Elec.,
                                             Plumbing) solutions.</h3>
@@ -1032,7 +1041,7 @@ overall interior scheme.</div>
                                 <div class="flipper">
                                     <div class="front">
                                         <div class="icon-box">
-                                            <span class="icon"><img src="images/icons/icon-1.svg" alt="" /></span>
+                                            <span class="icon"><img loading="lazy" decoding="async" src="images/icons/icon-1.svg" alt="" /></span>
                                         </div>
                                         <h3>Site preparation &
                                             infra-enablement</h3>
@@ -1073,7 +1082,7 @@ overall interior scheme.</div>
                                 <div class="flipper">
                                     <div class="front">
                                         <div class="icon-box">
-                                            <span class="icon"><img src="images/icons/icon-2.svg" alt="" /></span>
+                                            <span class="icon"><img loading="lazy" decoding="async" src="images/icons/icon-2.svg" alt="" /></span>
                                         </div>
                                         <h3>Interior Design, Fit-out &
                                             finishing</h3>
@@ -1113,7 +1122,7 @@ overall interior scheme.</div>
                                 <div class="flipper">
                                     <div class="front">
                                         <div class="icon-box">
-                                            <span class="icon"><img src="images/icons/icon-3.svg" alt="" /></span>
+                                            <span class="icon"><img loading="lazy" decoding="async" src="images/icons/icon-3.svg" alt="" /></span>
                                         </div>
                                         <h3>Building Maintenance</h3>
                                         <div class="text">Lexcept to obtain some advantage from it? But who has any
@@ -1146,7 +1155,7 @@ overall interior scheme.</div>
                                 <div class="flipper">
                                     <div class="front">
                                         <div class="icon-box">
-                                            <span class="icon"><img src="images/icons/icon-4.svg" alt="" /></span>
+                                            <span class="icon"><img loading="lazy" decoding="async" src="images/icons/icon-4.svg" alt="" /></span>
                                         </div>
                                         <h3>Architecture Design</h3>
                                         <div class="text">Lexcept to obtain some advantage from it? But who has any
@@ -1224,8 +1233,8 @@ overall interior scheme.</div>
                                 <!--Video Box-->
                                 <div class="video-box">
                                     <figure class="image">
-                                        <img src="images/background/partner.webp" alt="">
-                                        <a href="#"
+                                        <img loading="lazy" decoding="async" src="images/background/partner.webp" alt="">
+                                        <a href="images/background/partner.webp" aria-label="View larger image"
                                             class="lightbox-image overlay-box"><span class="flaticon-arrow"></span></a>
                                     </figure>
                                 </div>
@@ -1275,7 +1284,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1295,7 +1304,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1315,7 +1324,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1335,7 +1344,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/20.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/20.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1355,7 +1364,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/21.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/21.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1375,7 +1384,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1395,7 +1404,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1415,7 +1424,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1442,7 +1451,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1462,7 +1471,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1482,7 +1491,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1502,7 +1511,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1522,7 +1531,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1542,7 +1551,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1569,7 +1578,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1589,7 +1598,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1609,7 +1618,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1629,7 +1638,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1649,7 +1658,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1669,7 +1678,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1696,7 +1705,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1716,7 +1725,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1736,7 +1745,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1756,7 +1765,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/20.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/20.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1776,7 +1785,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/21.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/21.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1796,7 +1805,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1823,7 +1832,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/21.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/21.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1843,7 +1852,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/20.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/20.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1863,7 +1872,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1883,7 +1892,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1903,7 +1912,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1923,7 +1932,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/21.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/21.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1943,7 +1952,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/20.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/20.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1963,7 +1972,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -1983,7 +1992,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2003,7 +2012,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2030,7 +2039,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2050,7 +2059,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2070,7 +2079,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2090,7 +2099,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2110,7 +2119,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2130,7 +2139,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2157,7 +2166,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2177,7 +2186,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2197,7 +2206,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2217,7 +2226,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/18.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2237,7 +2246,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/19.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2257,7 +2266,7 @@ overall interior scheme.</div>
                             <div class="gallery-item-three">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="images/gallery/17.webp" alt="">
+                                        <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">
                                         <!--Overlay Box-->
                                         <div class="overlay-box">
                                             <div class="overlay-inner">
@@ -2306,7 +2315,7 @@ overall interior scheme.</div>
                     var detailUrl = project.detail;
                     return '<div class="gallery-item-three"><div class="inner-box"><figure class="image-box">' +
                         '<img src="' + image + '" alt="' + project.title + '"><div class="overlay-box"><div class="overlay-inner"><div class="content">' +
-                        '<a href="' + detailUrl + '" class="link" data-project-id="' + project.id + '"><span class="icon flaticon-unlink"></span></a></div></div></div></figure>' +
+                        '<a href="' + detailUrl + '" class="link" data-project-id="' + project.id + '" aria-label="View project: ' + project.title + '"><span class="icon flaticon-unlink"></span></a></div></div></div></figure>' +
                         '<h3><a href="' + detailUrl + '" data-project-id="' + project.id + '">' + project.title + '</a></h3><div class="designation">' + label(project.category) + '</div></div></div>';
                 };
                 var panel = function (id, records, active) {
@@ -2357,7 +2366,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2376,7 +2385,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2395,7 +2404,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2414,7 +2423,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/20.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/20.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2433,7 +2442,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/21.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/21.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2452,7 +2461,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2471,7 +2480,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2490,7 +2499,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2516,7 +2525,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2535,7 +2544,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2554,7 +2563,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2573,7 +2582,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2592,7 +2601,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2611,7 +2620,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2637,7 +2646,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2656,7 +2665,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2675,7 +2684,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2694,7 +2703,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2713,7 +2722,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2732,7 +2741,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2758,7 +2767,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2777,7 +2786,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2796,7 +2805,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2815,7 +2824,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/20.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/20.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2834,7 +2843,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/21.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/21.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2853,7 +2862,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2879,7 +2888,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/21.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/21.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2898,7 +2907,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/20.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/20.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2917,7 +2926,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2936,7 +2945,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2955,7 +2964,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2974,7 +2983,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/21.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/21.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -2993,7 +3002,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/20.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/20.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3012,7 +3021,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3031,7 +3040,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3050,7 +3059,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3076,7 +3085,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3095,7 +3104,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3114,7 +3123,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3133,7 +3142,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3152,7 +3161,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3171,7 +3180,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3197,7 +3206,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3216,7 +3225,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3235,7 +3244,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3254,7 +3263,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/18.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/18.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3273,7 +3282,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/19.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/19.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3292,7 +3301,7 @@ overall interior scheme.</div>
         <!--                    <div class="gallery-item-three">-->
         <!--                        <div class="inner-box">-->
         <!--                            <figure class="image-box">-->
-        <!--                                <img src="images/gallery/17.webp" alt="">-->
+        <!--                                <img loading="lazy" decoding="async" src="images/gallery/17.webp" alt="">-->
         <!--Overlay Box-->
         <!--                                <div class="overlay-box">-->
         <!--                                    <div class="overlay-inner">-->
@@ -3337,7 +3346,7 @@ overall interior scheme.</div>
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="images/resource/testy-blue (1).webp" alt="" />
+                                <img loading="lazy" decoding="async" src="images/resource/testy-blue (1).webp" alt="" />
                             </div>
                             <div class="text">We are extremely satisfied with Congo prime’s quality and execution. Good
                                 job done for our project</div>
@@ -3351,7 +3360,7 @@ overall interior scheme.</div>
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="images/resource/testy-yellow (1).webp" alt="" />
+                                <img loading="lazy" decoding="async" src="images/resource/testy-yellow (1).webp" alt="" />
                             </div>
                             <div class="text">They team delivered our residential project on time with perfect furniture
                                 and interior finishing.</div>
@@ -3365,7 +3374,7 @@ overall interior scheme.</div>
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="images/resource/testy-blue (1).webp" alt="" />
+                                <img loading="lazy" decoding="async" src="images/resource/testy-blue (1).webp" alt="" />
                             </div>
                             <div class="text">If you are looking for modern offices or retail projects, Congo Prime
                                 provides the best solution with quality construction.</div>
@@ -3378,7 +3387,7 @@ overall interior scheme.</div>
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="images/resource/testy-yellow (1).webp" alt="" />
+                                <img loading="lazy" decoding="async" src="images/resource/testy-yellow (1).webp" alt="" />
                             </div>
                             <div class="text">They always make quality projects with best construction. Kudos to the
                                 team Congo Prime</div>
@@ -3389,7 +3398,7 @@ overall interior scheme.</div>
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="images/resource/testy-blue (1).webp" alt="" />
+                                <img loading="lazy" decoding="async" src="images/resource/testy-blue (1).webp" alt="" />
                             </div>
                             <div class="text">I was also impressed with the professionalism of your team. Having worked
                                 with construction crews before, I think you have the best hands down. </div>
@@ -3401,7 +3410,7 @@ overall interior scheme.</div>
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="images/resource/testy-yellow (1).webp" alt="" />
+                                <img loading="lazy" decoding="async" src="images/resource/testy-yellow (1).webp" alt="" />
                             </div>
                             <div class="text">Congo Prime has been more than a developer our project. From top to bottom
                                 they really performed as a true partner.</div>
@@ -3421,39 +3430,39 @@ overall interior scheme.</div>
 
                 <div class="sponsors-outer">
                     <!--Sponsors Carousel-->
-                    <ul class="sponsors-carousel owl-carousel owl-theme">
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/2.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/1.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/2.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/4.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/5.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/6.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/3.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/1.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/2.webp" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/5.webp" alt=""></a>
+                    <div class="sponsors-carousel owl-carousel owl-theme">
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/2.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/1.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/2.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/4.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/5.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/6.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/3.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/1.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/2.webp" alt=""></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><img loading="lazy" decoding="async" src="images/clients/5.webp" alt="">
                             </figure>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -3478,7 +3487,7 @@ overall interior scheme.</div>
                             <div class="news-block col-md-6 col-sm-6 col-xs-12">
                                 <div class="inner-box">
                                     <div class="image">
-                                        <a href="congo-prime-kolwezi-housing-blog-updated.html"><img src="images/blog/blog1a-lubumbashi.webp" alt="Modern residential housing in Kolwezi" /></a>
+                                        <a href="congo-prime-kolwezi-housing-blog-updated.html"><img loading="lazy" decoding="async" src="images/blog/blog1a-lubumbashi.webp" alt="Modern residential housing in Kolwezi" /></a>
                                         <div class="post-date">Updated: 11 October 2026</div>
                                     </div>
                                     <div class="lower-box">
@@ -3493,7 +3502,7 @@ overall interior scheme.</div>
                             <div class="news-block col-md-6 col-sm-6 col-xs-12">
                                 <div class="inner-box">
                                     <div class="image">
-                                        <a href="10-points-blog.html"><img src="images/blog/blog-3alubumbashi.webp" alt="Home interior design with lighting, furniture and storage" /></a>
+                                        <a href="10-points-blog.html"><img loading="lazy" decoding="async" src="images/blog/blog-3alubumbashi.webp" alt="Home interior design with lighting, furniture and storage" /></a>
                                         <div class="post-date">Updated: 11 October 2026</div>
                                     </div>
                                     <div class="lower-box">
@@ -3579,6 +3588,7 @@ overall interior scheme.</div>
         <!--End Map Section-->
 
 
+        </main>
         <footer class="main-footer" style="background-image:url(images/background/6.webp)">
 
             <div class="auto-container">
@@ -3606,7 +3616,7 @@ overall interior scheme.</div>
                                 <div class="footer-column col-md-7 col-sm-6 col-xs-12">
                                     <div class="footer-widget logo-widget">
                                         <div class="logo">
-                                            <a href="index.html"><img src="images/footer-logo.webp" alt="" /></a>
+                                            <a href="index.html"><img loading="lazy" decoding="async" src="images/footer-logo.webp" alt="Congo Prime Construction" /></a>
                                         </div>
                                         <div class="text">Congo Prime is a young, dynamic construction company based in
                                             Lubumbashi, DRC, delivering industrial, commercial, hospitality, and
@@ -3712,28 +3722,19 @@ overall interior scheme.</div>
     <!--Revolution Slider-->
     <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
     <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
     <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
     <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
     <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
     <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
     <script src="js/main-slider-script.js"></script>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.fancybox.js"></script>
     <script src="js/owl.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/mixitup.js"></script>
     <script src="js/appear.js"></script>
     <script src="js/script.js?v=20261016"></script>
 
     <!--Google Map APi Key-->
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBKS14AnP3HCIVlUpPKtGp7CbYuMtcXE2o"></script>
-    <script src="js/map-script.js"></script>
     <!--End Google Map APi-->
 
 </body>

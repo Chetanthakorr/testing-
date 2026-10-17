@@ -35,22 +35,21 @@
 
 **********************************************/
 
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
 /*font-family: 'Poppins', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Lora', serif;*/
 
-@import url('font-awesome.css');
-@import url('flaticon.css');
-@import url('animate.css');
-@import url('hover.css');
-@import url('owl.css');
-@import url('text-rotate.css');
-@import url('jquery-ui.css');
-@import url('jquery.fancybox.min.css');
-@import url('jquery.bootstrap-touchspin.css');
+/*
+	Web fonts, font-awesome, flaticon and owl are linked directly from each page's <head>
+	(parallel downloads instead of a render-blocking @import chain). hover.css, animate.css,
+	jquery-ui.css, text-rotate.css and jquery.bootstrap-touchspin.css are not used by any
+	page; the only animate.css keyframes this stylesheet relies on are inlined below.
+*/
+@-webkit-keyframes fadeInDown { 0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } 100% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); } }
+@keyframes fadeInDown { 0% { opacity: 0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } 100% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); } }
+@-webkit-keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
 
 /*** 
 
@@ -471,7 +470,10 @@ li {
 	background: #ffffff;
 }
 
+/* Disabled: the full-screen overlay hid all content until window.load (every image, slider and script),
+   which was the single largest cause of the slow first paint and LCP. */
 .preloader {
+	display: none;
 	position: fixed;
 	left: 0px;
 	top: 0px;
@@ -1748,7 +1750,7 @@ img {
 
 .sec-title .title {
 	position: relative;
-	color: #797979;
+	color: #666666;
 	font-size: 20px;
 	line-height: 1.6em;
 	margin-top: 12px;
@@ -2827,7 +2829,7 @@ img {
 
 .testimonial-block .inner-box .text {
 	position: relative;
-	color: #797979;
+	color: #666666;
 	font-size: 16px;
 	line-height: 1.9em;
 	margin-bottom: 20px;
@@ -2952,7 +2954,7 @@ img {
 
 .news-block .inner-box .lower-box .text {
 	position: relative;
-	color: #7d7d7d;
+	color: #666666;
 	font-size: 17px;
 	line-height: 1.8em;
 	margin-bottom: 14px;
@@ -2960,7 +2962,7 @@ img {
 
 .news-block .inner-box .lower-box .read-more {
 	position: relative;
-	color: #797979;
+	color: #666666;
 	font-size: 16px;
 	font-weight: 600;
 	transition: all 0.3s ease;
@@ -4066,7 +4068,7 @@ img {
 
 .services-section-three .title-box .text {
 	position: relative;
-	color: #797979;
+	color: #666666;
 	font-size: 16px;
 	line-height: 1.8em;
 }
@@ -4150,7 +4152,7 @@ img {
 
 .service-block-three .inner-box .lower-content .text {
 	position: relative;
-	color: #898989;
+	color: #666666;
 	font-size: 15px;
 	font-weight: 400;
 	line-height: 1.8em;
@@ -9885,3 +9887,25 @@ body {
 .home-menu-icon { margin-right: 6px; color: rgb(255, 212, 59); }
 
 @media only screen and (max-width: 767px) { .home-menu-icon { display: none; } }
+/*
+	Home hero (Revolution Slider): until the slider script initialises, its container is 0px tall and every
+	slide is hidden, so the page jumped down when it appeared (most of the CLS) and nothing was painted for the
+	hero until all scripts ran (most of the LCP). Reserve the exact height the slider will take and show the
+	first slide's image straight away. The ratios mirror gridwidth/gridheight in js/main-slider-script.js; the
+	slider picks the smallest responsive level >= its own width, hence container queries rather than media queries.
+*/
+#rev_slider_two_wrapper { container-type: inline-size; }
+#rev_slider_two:not(.revslider-initialised) { aspect-ratio: 1200 / 650; max-height: 650px; overflow: hidden; }
+@container (max-width: 1200px) { #rev_slider_two:not(.revslider-initialised) { aspect-ratio: 1200 / 650; } }
+@container (max-width: 1040px) { #rev_slider_two:not(.revslider-initialised) { aspect-ratio: 1040 / 650; } }
+@container (max-width: 778px)  { #rev_slider_two:not(.revslider-initialised) { aspect-ratio: 778 / 650; } }
+@container (max-width: 480px)  { #rev_slider_two:not(.revslider-initialised) { aspect-ratio: 480 / 600; } }
+#rev_slider_two:not(.revslider-initialised) > ul,
+#rev_slider_two:not(.revslider-initialised) > ul > li:first-child { width: 100%; height: 100%; }
+#rev_slider_two:not(.revslider-initialised) > ul > li:first-child { visibility: visible; }
+#rev_slider_two:not(.revslider-initialised) > ul > li:first-child > img.rev-slidebg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
