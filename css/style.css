@@ -9909,3 +9909,7 @@ body {
 	object-fit: cover;
 	object-position: center center;
 }
+
+/* Clickable phone/email in contact lists keep the surrounding text colour */
+a.contact-link { color: inherit; }
+a.contact-link:hover, a.contact-link:focus { color: #daa520; text-decoration: underline; }
