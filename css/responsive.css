@@ -220,6 +220,12 @@
 		flex-wrap:wrap;
 	}
 
+	/* .clearfix pseudo-elements become flex items and split the free space, pulling the logo and menu button away from the edges */
+	.main-header .main-box .outer-container:before,
+	.main-header .main-box .outer-container:after{
+		display:none;
+	}
+
 	.main-header .main-box .logo-box{
 		float:none;
 		width:auto;
@@ -227,7 +233,7 @@
 	}
 
 	.main-header .main-box .logo-box .logo img{
-		width:130px;
+		width:160px;
 		height:auto;
 	}
 
@@ -852,11 +858,12 @@
 	}
 	
 	.main-header .main-box .logo-box{
-		text-align:center;
+		text-align:left;
+		padding:6px 0px;
 	}
-	
+
 	.main-header .main-box .outer-container{
-		padding-bottom:5px;
+		padding:4px 0px;
 	}
 	
 	.main-header .search-box-btn{
@@ -1247,13 +1254,13 @@
 	}
 	
 	.main-header .main-box .logo-box{
-		padding-bottom:0px;
+		padding:6px 0px;
 		width:auto;
 		margin-bottom:0px;
 	}
 
 	.main-header .main-box .logo-box .logo img{
-		width:105px;
+		width:140px;
 	}
 
 	.main-slider h1{
