@@ -1,0 +1,13 @@
+# Canonical clean blog URLs
+/blog/construction-and-infrastructure-development-lubumbashi /congo-prime-construction-and-infrastructure-development-lubumbashi.html 200
+/blog/emerging-housing-design-trends-kolwezi /congo-prime-emerging-housing-design-trends-kolwezi.html 200
+/blog/10-points-designing-home-interior /congo-prime-10-points-designing-home-interior.html 200
+/blog/building-solid-ground-land-acquisition-permits-haut-katanga /congo-prime-building-solid-ground-land-acquisition-permits-haut-katanga.html 200
+/blog/engineering-katanga-homes-defeat-wet-season /congo-prime-engineering-katanga-homes-defeat-wet-season.html 200
+
+# Redirect legacy blog filenames to their canonical URLs
+/congo-prime-infrastructure-blog-updated.html /blog/construction-and-infrastructure-development-lubumbashi 301
+/congo-prime-kolwezi-housing-blog-updated.html /blog/emerging-housing-design-trends-kolwezi 301
+/10-points-blog.html /blog/10-points-designing-home-interior 301
+/land-acquisition-and-construction-permits-haut-katanga.html /blog/building-solid-ground-land-acquisition-permits-haut-katanga 301
+/residential-structural-engineering-greater-katanga.html /blog/engineering-katanga-homes-defeat-wet-season 301

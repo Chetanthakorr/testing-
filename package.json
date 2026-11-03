@@ -1,0 +1,7 @@
+{
+  "name": "congo-prime-site",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js"
+  }
+}
