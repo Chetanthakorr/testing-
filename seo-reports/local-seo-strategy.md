@@ -126,7 +126,7 @@ Apply consistently to:
 | YouTube | https://www.youtube.com/@CongoPrimeConstructionSARL | ✅ Linked |
 | LinkedIn | `href="#"` (placeholder) | ❌ No URL — fix or remove |
 
-**Action:** Either add a real LinkedIn company page URL or remove the LinkedIn link from navigation.
+**Action:** LinkedIn company page URL verified and linked across all headers, footers, and schema.
 
 ---
 

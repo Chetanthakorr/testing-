@@ -32,7 +32,7 @@
   "description": "...",
   "areaServed": ["Lubumbashi", "Kolwezi", "Likasi", "Haut-Katanga", "Lualaba", "DRC"],
   "logo": { "@type": "ImageObject", "url": "https://congoprime.com/images/logo-2.webp" },
-  "sameAs": ["Instagram", "Facebook", "YouTube"]
+  "sameAs": ["Instagram", "Facebook", "YouTube", "LinkedIn"]
 }
 ```
 

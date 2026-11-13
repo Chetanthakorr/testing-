@@ -57,7 +57,7 @@
 - [ ] Blog listing links point to `/blog/[slug]` clean URLs (not `congo-prime-*.html`)
 - [ ] Project category pages link to individual project detail pages
 - [ ] Social media links in header work (Instagram, Facebook, YouTube)
-- [ ] LinkedIn link either has real URL or is removed
+- [x] LinkedIn link added to all pages and schema: https://www.linkedin.com/company/congo-prime-construction-sarl/ ?
 
 ### JavaScript Functionality
 - [ ] Project filter buttons work on `projects.html`
@@ -169,7 +169,7 @@
 | Business phone number | LocalBusiness schema, GBP, header |
 | Business hours | LocalBusiness schema, GBP |
 | Confirmed email address | Schema, Contact page |
-| LinkedIn company page URL | Navigation link (currently placeholder `#`) |
+| LinkedIn company page URL | Linked on all pages and in schema | ? Done |
 | GBP listing URL (after verification) | sameAs in schema |
 | Verified publish dates for blog posts | Currently estimated — confirm actual dates |
 
