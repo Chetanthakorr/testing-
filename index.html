@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://congoprime.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Congo Prime Construction">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="Construction Company in Lubumbashi, DRC | Congo Prime">
 <meta property="og:description" content="Congo Prime is a construction company in Lubumbashi, DRC, delivering industrial, commercial, hospitality, residential and infrastructure projects across the Democratic Republic of the Congo.">
 <meta property="og:url" content="https://congoprime.com/">
@@ -144,11 +145,23 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "GeneralContractor",
       "@id": "https://congoprime.com/#organization",
-      "name": "Congo Prime Construction",
+      "name": "Congo Prime Construction SARL",
       "url": "https://congoprime.com/",
-      "logo": "https://congoprime.com/images/logo-2.webp",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://congoprime.com/images/logo-2.webp"
+      },
+      "description": "Congo Prime Construction SARL provides professional construction and infrastructure solutions in the DRC, including project planning, design-build, civil and structural works, MEP, site preparation, interior design and finishing.",
+      "areaServed": [
+        {"@type": "City", "name": "Lubumbashi"},
+        {"@type": "City", "name": "Kolwezi"},
+        {"@type": "City", "name": "Likasi"},
+        {"@type": "AdministrativeArea", "name": "Haut-Katanga"},
+        {"@type": "AdministrativeArea", "name": "Lualaba"},
+        {"@type": "Country", "name": "Democratic Republic of the Congo"}
+      ],
       "sameAs": [
         "https://www.instagram.com/congoprimeconstructionsarl/",
         "https://www.facebook.com/profile.php?id=61595428409081",

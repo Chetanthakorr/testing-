@@ -4,5 +4,7 @@ Disallow: /public_html/
 Disallow: /store/
 Disallow: /_optimization/
 Disallow: /.git/
+Disallow: /blog-detail.html
+Disallow: /projects-detail.html
 
 Sitemap: https://congoprime.com/sitemap.xml
