@@ -30,6 +30,7 @@ const contentTypes = {
   '.jpeg': 'image/jpeg',
   '.svg': 'image/svg+xml',
   '.webp': 'image/webp',
+  '.txt': 'text/plain; charset=utf-8',
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
   '.ttf': 'font/ttf',
@@ -46,8 +47,16 @@ function sendFile(response, relativePath) {
 
   fs.stat(filePath, (error, stats) => {
     if (error || !stats.isFile()) {
-      response.writeHead(404);
-      response.end('Not found');
+      const notFoundPath = path.resolve(root, '404.html');
+      fs.stat(notFoundPath, (notFoundError, notFoundStats) => {
+        if (notFoundError || !notFoundStats.isFile()) {
+          response.writeHead(404);
+          response.end('Not found');
+          return;
+        }
+        response.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+        fs.createReadStream(notFoundPath).pipe(response);
+      });
       return;
     }
 

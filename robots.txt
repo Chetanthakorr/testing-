@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /public_html/
+Disallow: /store/
+Disallow: /_optimization/
+Disallow: /.git/
+
+Sitemap: https://congoprime.com/sitemap.xml
