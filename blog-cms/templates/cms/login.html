@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login — Congo Prime Blog CMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+{% load static %}
+<link rel="stylesheet" href="{% static 'cms/css/dashboard.css' %}">
+</head>
+<body>
+<div class="login-page">
+  <div class="login-box">
+    <div class="logo">
+      <img src="/images/footer-logo.webp" alt="Congo Prime" onerror="this.style.display='none'">
+      <div style="font-size:22px;font-weight:700;color:#06345b;margin-top:8px;">Congo Prime</div>
+    </div>
+    <h1>Blog CMS</h1>
+    <p class="cms-label">Editor Sign In</p>
+
+    {% if error %}
+      <div class="alert alert-error"><i class="fa fa-exclamation-circle"></i> {{ error }}</div>
+    {% endif %}
+
+    <form method="post" action="{% url 'accounts:login' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="form-control" autofocus autocomplete="username" required placeholder="Your username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" autocomplete="current-password" required placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn btn-primary w-full" style="justify-content:center;margin-top:8px;">
+        <i class="fa fa-sign-in-alt"></i> Sign In
+      </button>
+    </form>
+
+    <p style="margin-top:20px;text-align:center;font-size:12px;color:#999;">
+      Congo Prime Construction &mdash; Internal CMS Only
+    </p>
+  </div>
+</div>
+{% load static %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</body>
+</html>

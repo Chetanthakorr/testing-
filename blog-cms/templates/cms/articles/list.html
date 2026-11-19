@@ -1,0 +1,81 @@
+{% extends 'cms/base.html' %}
+{% block title %}Articles — Congo Prime Blog CMS{% endblock %}
+{% block topbar_title %}Articles{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Articles</h1>
+  <a href="{% url 'articles:create' %}" class="btn btn-gold"><i class="fa fa-plus"></i> New Article</a>
+</div>
+
+<form method="get" class="filter-bar">
+  <input type="text" name="q" value="{{ q }}" placeholder="Search articles..." style="flex:1;min-width:200px;">
+  <select name="status">
+    <option value="">All Statuses</option>
+    {% for val, label in status_choices %}
+      {% if val != 'trash' %}
+      <option value="{{ val }}" {% if status_filter == val %}selected{% endif %}>{{ label }}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+  <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Filter</button>
+  {% if q or status_filter %}<a href="{% url 'articles:list' %}" class="btn btn-outline">Clear</a>{% endif %}
+</form>
+
+<div class="cms-table-wrapper">
+  <table class="cms-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Categories</th>
+        <th>Author</th>
+        <th>Created</th>
+        <th>Updated</th>
+        <th class="col-actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for article in articles %}
+      <tr>
+        <td>
+          <a href="{% url 'articles:edit' article.pk %}" style="color:var(--navy);font-weight:600;">{{ article.title|truncatechars:55 }}</a>
+          <div style="font-size:11px;color:var(--text-muted);">/blog/{{ article.slug }}</div>
+        </td>
+        <td><span class="badge badge-{{ article.status }}">{{ article.get_status_display }}</span></td>
+        <td style="font-size:12px;color:var(--text-muted);">
+          {% for c in article.categories.all %}{{ c.name }}{% if not forloop.last %}, {% endif %}{% empty %}&mdash;{% endfor %}
+        </td>
+        <td style="font-size:12px;">{{ article.author.name|default:"—" }}</td>
+        <td style="font-size:12px;color:var(--text-muted);">{{ article.created_at|date:"d M Y" }}</td>
+        <td style="font-size:12px;color:var(--text-muted);">{{ article.updated_at|date:"d M Y" }}</td>
+        <td class="col-actions">
+          <a href="{% url 'articles:edit' article.pk %}" class="btn btn-outline btn-sm" title="Edit"><i class="fa fa-edit"></i></a>
+          <a href="{% url 'preview:preview' article.pk %}" class="btn btn-outline btn-sm" target="_blank" title="Preview"><i class="fa fa-eye"></i></a>
+          <a href="{% url 'history:article' article.pk %}" class="btn btn-outline btn-sm" title="History"><i class="fa fa-history"></i></a>
+          <form method="post" action="{% url 'articles:delete' article.pk %}" style="display:inline;" onsubmit="return confirmDelete('Move &quot;{{ article.title|escapejs }}&quot; to trash?')">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger btn-sm" title="Trash"><i class="fa fa-trash"></i></button>
+          </form>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7" class="text-center text-muted" style="padding:30px;">
+          No articles found.
+          <a href="{% url 'articles:create' %}">Create your first article</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% if articles.has_other_pages %}
+<ul class="pagination">
+  {% if articles.has_previous %}<li><a href="?page={{ articles.previous_page_number }}&q={{ q }}&status={{ status_filter }}">&laquo; Prev</a></li>{% endif %}
+  <li><span class="current">{{ articles.number }} / {{ articles.paginator.num_pages }}</span></li>
+  {% if articles.has_next %}<li><a href="?page={{ articles.next_page_number }}&q={{ q }}&status={{ status_filter }}">Next &raquo;</a></li>{% endif %}
+</ul>
+{% endif %}
+{% endblock %}

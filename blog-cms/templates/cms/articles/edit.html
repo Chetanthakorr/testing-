@@ -1,0 +1,248 @@
+{% extends 'cms/base.html' %}
+{% block title %}{% if is_create %}New Article{% else %}Edit: {{ article.title|truncatechars:30 }}{% endif %} — Congo Prime CMS{% endblock %}
+{% block topbar_title %}{% if is_create %}New Article{% else %}Edit Article{% endif %}{% endblock %}
+
+{% block extra_css %}
+<link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+<style>
+  textarea#id_content { display: none; }
+</style>
+{% endblock %}
+
+{% block content %}
+{% if not is_create and article %}
+  <input type="hidden" id="article-pk" value="{{ article.pk }}">
+{% endif %}
+
+<div class="page-header">
+  <div>
+    <h1>{% if is_create %}New Article{% else %}Edit Article{% endif %}</h1>
+    <div class="breadcrumb">
+      <a href="{% url 'articles:list' %}">Articles</a> &rsaquo;
+      {% if is_create %}New{% else %}{{ article.title|truncatechars:40 }}{% endif %}
+    </div>
+  </div>
+  <div class="flex gap-2 items-center">
+    {% if not is_create and article %}
+      <a href="{% url 'preview:preview' article.pk %}" class="btn btn-outline btn-sm" target="_blank"><i class="fa fa-eye"></i> Preview</a>
+      <a href="{% url 'history:article' article.pk %}" class="btn btn-outline btn-sm"><i class="fa fa-history"></i> History</a>
+    {% endif %}
+    <a href="{% url 'articles:list' %}" class="btn btn-outline btn-sm"><i class="fa fa-arrow-left"></i> Back</a>
+  </div>
+</div>
+
+<form method="post" id="article-form">
+  {% csrf_token %}
+  <input type="hidden" name="action" id="publish-action" value="save_draft">
+
+  <div class="editor-layout">
+
+    <!-- LEFT: Main editor -->
+    <div class="editor-main">
+
+      <div class="form-card">
+        <h3><i class="fa fa-heading"></i> Title &amp; Slug</h3>
+        <div class="form-group">
+          <label for="id_title">Article Title *</label>
+          {{ form.title }}
+          {% if form.title.errors %}<div style="color:var(--danger);font-size:12px;">{{ form.title.errors }}</div>{% endif %}
+        </div>
+        <div class="form-group">
+          <label for="id_slug">URL Slug *</label>
+          <div class="flex gap-2 items-center">
+            {{ form.slug }}
+            <button type="button" class="toggle-editor-btn" id="regenerate-slug-btn" onclick="document.getElementById('id_slug').value=makeSlug(document.getElementById('id_title').value);return false;" style="white-space:nowrap;">&#x21bb; Regenerate</button>
+          </div>
+          <div id="slug-status" class="slug-status"></div>
+          <div class="form-hint">URL: <code>https://congoprime.com/blog/<span id="slug-preview">{{ form.slug.value }}</span></code></div>
+        </div>
+        <div class="form-group">
+          <label for="id_excerpt">Excerpt (listing page summary)</label>
+          {{ form.excerpt }}
+          <div class="form-hint">Shown on blog.html listing card. Max 300 chars recommended.</div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>
+          <i class="fa fa-align-left"></i> Content
+          <button type="button" class="toggle-editor-btn" id="toggle-html-btn" style="float:right;margin-top:2px;">HTML Source</button>
+        </h3>
+        <!-- Quill visual editor container -->
+        <div id="quill-editor-container"></div>
+        <!-- Hidden textarea holds actual HTML content submitted -->
+        {{ form.content }}
+        {% if form.content.errors %}<div style="color:var(--danger);font-size:12px;">{{ form.content.errors }}</div>{% endif %}
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Sidebar panels -->
+    <div class="editor-sidebar">
+
+      <!-- Status & Dates -->
+      <div class="form-card">
+        <h3><i class="fa fa-clock"></i> Dates</h3>
+        <div class="form-group">
+          <label>Published At</label>
+          {{ form.published_at }}
+          <div class="form-hint">Leave blank to auto-set on publish.</div>
+        </div>
+        <div class="form-group">
+          <label>Schedule At</label>
+          {{ form.scheduled_at }}
+          <div class="form-hint">Set a future date and click Schedule.</div>
+        </div>
+        {% if not is_create and article %}
+          <div style="font-size:12px;color:var(--text-muted);margin-top:8px;">
+            Status: <span class="badge badge-{{ article.status }}">{{ article.get_status_display }}</span>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Featured Image -->
+      <div class="form-card">
+        <h3><i class="fa fa-image"></i> Featured Image</h3>
+        <div class="form-group">
+          <label>Select Image</label>
+          <select name="featured_image" id="id_featured_image" class="form-control">
+            <option value="">— No featured image —</option>
+            {% for mf in form.featured_image.field.queryset %}
+              <option value="{{ mf.pk }}" {% if form.featured_image.value == mf.pk|stringformat:"s" %}selected{% endif %}>
+                {{ mf.filename }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Image Alt Text</label>
+          {{ form.featured_image_alt }}
+        </div>
+        <div class="form-hint"><a href="{% url 'media_library:upload' %}" target="_blank"><i class="fa fa-upload"></i> Upload new image</a></div>
+      </div>
+
+      <!-- Author -->
+      <div class="form-card">
+        <h3><i class="fa fa-user"></i> Author</h3>
+        <div class="form-group">
+          <select name="author" id="id_author" class="form-control">
+            <option value="">— No author —</option>
+            {% for a in form.author.field.queryset %}
+              <option value="{{ a.pk }}" {% if form.author.value == a.pk|stringformat:"s" %}selected{% endif %}>{{ a.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-hint"><a href="{% url 'authors:create' %}" target="_blank"><i class="fa fa-plus"></i> Create new author</a></div>
+      </div>
+
+      <!-- Categories -->
+      <div class="form-card">
+        <h3><i class="fa fa-folder"></i> Categories</h3>
+        <div class="checkbox-list">
+          {% for choice in form.categories %}
+            <label>{{ choice.tag }} {{ choice.choice_label }}</label>
+          {% endfor %}
+        </div>
+        {% if not form.categories.field.queryset.exists %}
+          <div class="form-hint"><a href="{% url 'categories:list' %}" target="_blank">Create categories first</a></div>
+        {% endif %}
+      </div>
+
+      <!-- Tags -->
+      <div class="form-card">
+        <h3><i class="fa fa-tag"></i> Tags</h3>
+        <div class="checkbox-list">
+          {% for choice in form.tags %}
+            <label>{{ choice.tag }} {{ choice.choice_label }}</label>
+          {% endfor %}
+        </div>
+        {% if not form.tags.field.queryset.exists %}
+          <div class="form-hint"><a href="{% url 'tags:list' %}" target="_blank">Create tags first</a></div>
+        {% endif %}
+      </div>
+
+      <!-- SEO -->
+      <div class="form-card">
+        <h3><i class="fa fa-search"></i> SEO</h3>
+        <div class="form-group">
+          <label>SEO Title <span class="text-muted">(max 70)</span></label>
+          <input type="text" name="seo_title" id="id_seo_title" class="form-control" value="{{ form.seo_title.value|default:'' }}" maxlength="70" data-maxlength="70">
+          <div class="char-counter" id="id_seo_title-counter"></div>
+          <div class="form-hint">Leave blank to use article title.</div>
+        </div>
+        <div class="form-group">
+          <label>Meta Description <span class="text-muted">(max 160)</span></label>
+          <textarea name="seo_description" id="id_seo_description" class="form-control" rows="3" maxlength="160" data-maxlength="160">{{ form.seo_description.value|default:'' }}</textarea>
+          <div class="char-counter" id="id_seo_description-counter"></div>
+        </div>
+        <div class="form-group">
+          <label>Canonical URL</label>
+          {{ form.canonical_url }}
+          <div class="form-hint">Leave blank to auto-generate.</div>
+        </div>
+      </div>
+
+      {% if not is_create and article and article.revisions.exists %}
+      <!-- Revisions -->
+      <div class="form-card">
+        <h3><i class="fa fa-code-branch"></i> Recent Revisions</h3>
+        {% for rev in revisions %}
+        <div style="font-size:12px;border-bottom:1px solid var(--border);padding:6px 0;">
+          <strong>{{ rev.changed_at|date:"d M Y H:i" }}</strong><br>
+          <span class="text-muted">by {{ rev.changed_by }}</span>
+          {% if rev.note %}<span class="text-muted"> &mdash; {{ rev.note }}</span>{% endif %}
+        </div>
+        {% endfor %}
+        <a href="{% url 'history:article' article.pk %}" class="btn btn-outline btn-sm" style="margin-top:8px;">Full History</a>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <!-- Publish action bar (sticky bottom) -->
+  <div class="publish-bar">
+    <button type="submit" class="btn btn-outline" data-action="save_draft">
+      <i class="fa fa-save"></i> Save Draft
+    </button>
+    <button type="submit" class="btn btn-primary" data-action="publish" onclick="if(!confirm('Publish this article to the live site?'))return false;">
+      <i class="fa fa-globe"></i> Publish Now
+    </button>
+    <button type="submit" class="btn btn-warning" data-action="schedule">
+      <i class="fa fa-calendar"></i> Schedule
+    </button>
+    {% if not is_create and article and article.status == 'published' %}
+    <button type="submit" class="btn btn-outline" data-action="unpublish" onclick="if(!confirm('Unpublish this article?'))return false;">
+      <i class="fa fa-eye-slash"></i> Unpublish
+    </button>
+    {% endif %}
+    {% if not is_create and article %}
+    <form method="post" action="{% url 'articles:delete' article.pk %}" style="display:inline;" onsubmit="return confirmDelete()">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Move to Trash</button>
+    </form>
+    {% endif %}
+    <div class="status-info">
+      {% if not is_create and article %}
+        Status: <strong>{{ article.get_status_display }}</strong>
+        &nbsp;|&nbsp; Last saved: {{ article.updated_at|date:"d M Y H:i" }}
+      {% endif %}
+    </div>
+  </div>
+
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+<script>
+// Update slug preview live
+document.addEventListener('DOMContentLoaded', function(){
+  var slugInput = document.getElementById('id_slug');
+  var slugPreview = document.getElementById('slug-preview');
+  if(slugInput && slugPreview){
+    slugInput.addEventListener('input', function(){ slugPreview.textContent = this.value; });
+  }
+});
+</script>
+{% endblock %}

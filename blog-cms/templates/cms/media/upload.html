@@ -1,0 +1,29 @@
+{% extends 'cms/base.html' %}
+{% block title %}Upload Image — Congo Prime CMS{% endblock %}
+{% block topbar_title %}Upload Image{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Upload Image</h1>
+  <a href="{% url 'media_library:list' %}" class="btn btn-outline btn-sm"><i class="fa fa-arrow-left"></i> Library</a>
+</div>
+<div class="form-card" style="max-width:520px;">
+  <h3><i class="fa fa-upload"></i> New Upload</h3>
+  <form method="post" enctype="multipart/form-data" action="{% url 'media_library:upload' %}">
+    {% csrf_token %}
+    <div class="form-group">
+      <label>Image File *</label>
+      <input type="file" name="file" class="form-control" accept="image/*" required>
+      <div class="form-hint">JPEG, PNG, WebP, GIF, SVG — max 10 MB.<br>File will also be copied to <code>images/blog/</code> in the site root.</div>
+    </div>
+    <div class="form-group">
+      <label>Alt Text</label>
+      <input type="text" name="alt_text" class="form-control" placeholder="Describe the image for screen readers and SEO">
+    </div>
+    <div class="form-group">
+      <label>Caption (optional)</label>
+      <input type="text" name="caption" class="form-control" placeholder="Optional caption">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-upload"></i> Upload</button>
+  </form>
+</div>
+{% endblock %}

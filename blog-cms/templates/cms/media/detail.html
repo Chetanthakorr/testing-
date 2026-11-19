@@ -1,0 +1,40 @@
+{% extends 'cms/base.html' %}
+{% block title %}{{ media.filename }} — Media{% endblock %}
+{% block topbar_title %}Media Detail{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ media.filename }}</h1>
+  <a href="{% url 'media_library:list' %}" class="btn btn-outline btn-sm"><i class="fa fa-arrow-left"></i> Library</a>
+</div>
+<div style="display:grid;grid-template-columns:1fr 300px;gap:20px;">
+  <div class="form-card text-center">
+    <img src="{{ media.url }}" alt="{{ media.alt_text|default:media.filename }}" style="max-width:100%;border-radius:5px;">
+  </div>
+  <div class="form-card">
+    <h3>Details</h3>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group"><label>Alt Text</label><input type="text" name="alt_text" class="form-control" value="{{ media.alt_text }}"></div>
+      <div class="form-group"><label>Caption</label><input type="text" name="caption" class="form-control" value="{{ media.caption }}"></div>
+      <div class="form-group">
+        <label>File path in site</label>
+        <code style="font-size:12px;display:block;padding:6px;background:#f5f7fa;border-radius:4px;">{{ media.site_image_path }}</code>
+      </div>
+      <div class="form-group">
+        <label>Uploaded</label>
+        <span style="font-size:13px;">{{ media.uploaded_at|date:"d M Y H:i" }}</span>
+      </div>
+      <div class="form-group">
+        <label>Size</label>
+        <span style="font-size:13px;">{{ media.file_size|filesizeformat }}</span>
+      </div>
+      <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update</button>
+    </form>
+    <hr>
+    <form method="post" action="{% url 'media_library:delete' media.pk %}" onsubmit="return confirmDelete('Permanently delete {{ media.filename|escapejs }}?')">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger w-full" style="justify-content:center;"><i class="fa fa-trash"></i> Delete</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Congo Prime Blog CMS{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'cms/css/dashboard.css' %}">
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+  <div class="cms-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="cms-sidebar" id="cms-sidebar">
+      <div class="sidebar-logo">
+        <img src="/images/footer-logo.webp" alt="Congo Prime" onerror="this.style.display='none'">
+        <span class="cms-label">Blog CMS</span>
+      </div>
+
+
+      <nav class="sidebar-nav">
+        <div class="nav-section">Main</div>
+        <a href="{% url 'dashboard:home' %}"
+          class="{% if request.resolver_match.namespace == 'dashboard' %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-th-large"></i></span> Dashboard
+        </a>
+
+        <div class="nav-section">Content</div>
+        <a href="{% url 'articles:list' %}"
+          class="{% if request.resolver_match.namespace == 'articles' and 'trash' not in request.path %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-file-alt"></i></span> Articles
+        </a>
+        <a href="{% url 'articles:create' %}">
+          <span class="nav-icon"><i class="fa fa-plus-circle"></i></span> New Article
+        </a>
+        <a href="{% url 'articles:trash' %}" class="{% if 'trash' in request.path %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-trash"></i></span> Trash
+        </a>
+
+        <div class="nav-section">Organisation</div>
+        <a href="{% url 'categories:list' %}"
+          class="{% if request.resolver_match.namespace == 'categories' %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-folder"></i></span> Categories
+        </a>
+        <a href="{% url 'tags:list' %}" class="{% if request.resolver_match.namespace == 'tags' %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-tag"></i></span> Tags
+        </a>
+        <a href="{% url 'authors:list' %}"
+          class="{% if request.resolver_match.namespace == 'authors' %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-user-edit"></i></span> Authors
+        </a>
+
+        <div class="nav-section">Media</div>
+        <a href="{% url 'media_library:list' %}"
+          class="{% if request.resolver_match.namespace == 'media_library' %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-images"></i></span> Media Library
+        </a>
+        <a href="{% url 'media_library:upload' %}">
+          <span class="nav-icon"><i class="fa fa-upload"></i></span> Upload Image
+        </a>
+
+        <div class="nav-section">Tools</div>
+        <a href="{% url 'importer:import' %}"
+          class="{% if request.resolver_match.namespace == 'importer' %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-file-import"></i></span> HTML Importer
+        </a>
+        <a href="{% url 'history:log' %}"
+          class="{% if request.resolver_match.namespace == 'history' %}active{% endif %}">
+          <span class="nav-icon"><i class="fa fa-history"></i></span> Publish Log
+        </a>
+
+        <div class="nav-section">Site</div>
+        <a href="/" target="_blank">
+          <span class="nav-icon"><i class="fa fa-external-link-alt"></i></span> View Website
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div>Signed in as <strong>{{ request.user.username }}</strong></div>
+        <form method="post" action="{% url 'accounts:logout' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit"
+            style="background:none;border:none;color:rgba(255,255,255,.65);cursor:pointer;font-size:12px;padding:0;text-decoration:underline;">Log
+            Out</button>
+        </form>
+      </div>
+    </aside>
+
+    <!-- Main area -->
+    <div class="cms-main">
+      <!-- Top bar -->
+      <div class="cms-topbar">
+        <button id="sidebar-toggle" class="btn btn-outline btn-sm" style="display:none" aria-label="Menu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="topbar-title">{% block topbar_title %}Congo Prime Blog CMS{% endblock %}</div>
+        <div class="topbar-actions">
+          <a href="{% url 'articles:create' %}" class="btn btn-gold btn-sm">
+            <i class="fa fa-plus"></i> New Article
+          </a>
+          <span class="topbar-user">
+            <strong>{{ request.user.get_full_name|default:request.user.username }}</strong>
+            {% if request.user.is_superuser %}<span class="badge badge-draft" style="margin-left:4px">Admin</span>{%
+            endif %}
+          </span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="cms-content">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" data-auto-dismiss>
+          {% if message.tags == 'success' %}<i class="fa fa-check-circle"></i>
+          {% elif message.tags == 'error' %}<i class="fa fa-exclamation-circle"></i>
+          {% else %}<i class="fa fa-info-circle"></i>{% endif %}
+          {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+
+  </div>
+  {% load static %}
+  <script src="{% static 'cms/js/dashboard.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+
+</html>

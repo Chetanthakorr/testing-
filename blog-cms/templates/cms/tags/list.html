@@ -1,0 +1,38 @@
+{% extends 'cms/base.html' %}
+{% block title %}Tags — Congo Prime CMS{% endblock %}
+{% block topbar_title %}Tags{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Tags</h1></div>
+<div style="display:grid;grid-template-columns:1fr 280px;gap:20px;">
+  <div class="cms-table-wrapper">
+    <table class="cms-table">
+      <thead><tr><th>Name</th><th>Slug</th><th>Articles</th><th>Actions</th></tr></thead>
+      <tbody>
+        {% for tag in tags %}
+        <tr>
+          <td><span class="badge badge-draft">{{ tag.name }}</span></td>
+          <td><code style="font-size:12px;">{{ tag.slug }}</code></td>
+          <td>{{ tag.articles.count }}</td>
+          <td>
+            <form method="post" action="{% url 'tags:delete' tag.pk %}" style="display:inline;" onsubmit="return confirmDelete()">
+              {% csrf_token %}
+              <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+            </form>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" class="text-center text-muted" style="padding:20px;">No tags yet.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="form-card">
+    <h3><i class="fa fa-plus"></i> New Tag</h3>
+    <form method="post" action="{% url 'tags:create' %}">
+      {% csrf_token %}
+      <div class="form-group"><label>Tag Name *</label><input type="text" name="name" class="form-control" required placeholder="e.g. Lubumbashi"></div>
+      <button type="submit" class="btn btn-primary w-full" style="justify-content:center;"><i class="fa fa-plus"></i> Add Tag</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

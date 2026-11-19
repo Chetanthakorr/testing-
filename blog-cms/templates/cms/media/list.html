@@ -1,0 +1,49 @@
+{% extends 'cms/base.html' %}
+{% block title %}Media Library — Congo Prime CMS{% endblock %}
+{% block topbar_title %}Media Library{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Media Library</h1>
+  <a href="{% url 'media_library:upload' %}" class="btn btn-gold"><i class="fa fa-upload"></i> Upload Image</a>
+</div>
+
+<form method="get" class="filter-bar">
+  <input type="text" name="q" value="{{ q }}" placeholder="Search by filename..." style="flex:1">
+  <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+  {% if q %}<a href="{% url 'media_library:list' %}" class="btn btn-outline">Clear</a>{% endif %}
+</form>
+
+{% if media_files %}
+<div class="media-grid">
+  {% for mf in media_files %}
+  <div class="media-card">
+    <a href="{% url 'media_library:detail' mf.pk %}">
+      <img src="{{ mf.url }}" alt="{{ mf.alt_text|default:mf.filename }}" loading="lazy">
+    </a>
+    <div class="media-info">
+      <div class="media-name" title="{{ mf.filename }}">{{ mf.filename }}</div>
+      <div style="font-size:10px;color:var(--text-muted);">{{ mf.uploaded_at|date:"d M Y" }}</div>
+      <form method="post" action="{% url 'media_library:delete' mf.pk %}" onsubmit="return confirmDelete('Delete {{ mf.filename|escapejs }}?')">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger btn-sm" style="margin-top:4px;width:100%;justify-content:center;"><i class="fa fa-trash"></i></button>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% if media_files.has_other_pages %}
+<ul class="pagination">
+  {% if media_files.has_previous %}<li><a href="?page={{ media_files.previous_page_number }}&q={{ q }}">&laquo;</a></li>{% endif %}
+  <li><span class="current">{{ media_files.number }} / {{ media_files.paginator.num_pages }}</span></li>
+  {% if media_files.has_next %}<li><a href="?page={{ media_files.next_page_number }}&q={{ q }}">&raquo;</a></li>{% endif %}
+</ul>
+{% endif %}
+
+{% else %}
+<div class="form-card text-center" style="padding:40px;">
+  <i class="fa fa-images" style="font-size:48px;color:var(--border);display:block;margin-bottom:12px;"></i>
+  <p class="text-muted">No images yet. <a href="{% url 'media_library:upload' %}">Upload your first image</a>.</p>
+</div>
+{% endif %}
+{% endblock %}

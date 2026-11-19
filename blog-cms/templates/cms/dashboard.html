@@ -1,0 +1,104 @@
+{% extends 'cms/base.html' %}
+{% block title %}Dashboard — Congo Prime Blog CMS{% endblock %}
+{% block topbar_title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Dashboard</h1>
+</div>
+
+<!-- Stat cards -->
+<div class="stat-cards">
+  <div class="stat-card">
+    <div class="stat-value">{{ total_articles }}</div>
+    <div class="stat-label">Total Articles</div>
+  </div>
+  <div class="stat-card green">
+    <div class="stat-value">{{ published_count }}</div>
+    <div class="stat-label">Published</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">{{ draft_count }}</div>
+    <div class="stat-label">Drafts</div>
+  </div>
+  <div class="stat-card orange">
+    <div class="stat-value">{{ scheduled_count }}</div>
+    <div class="stat-label">Scheduled</div>
+  </div>
+  <div class="stat-card gold">
+    <div class="stat-value">{{ media_count }}</div>
+    <div class="stat-label">Media Files</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">{{ category_count }}</div>
+    <div class="stat-label">Categories</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">{{ author_count }}</div>
+    <div class="stat-label">Authors</div>
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+  <!-- Recent Articles -->
+  <div class="form-card">
+    <h3><i class="fa fa-file-alt" style="color:var(--gold)"></i> Recent Articles</h3>
+    {% if recent_articles %}
+      <div class="cms-table-wrapper">
+        <table class="cms-table">
+          <thead><tr><th>Title</th><th>Status</th><th>Updated</th></tr></thead>
+          <tbody>
+            {% for a in recent_articles %}
+            <tr>
+              <td><a href="{% url 'articles:edit' a.pk %}" style="color:var(--navy);font-weight:500;">{{ a.title|truncatechars:40 }}</a></td>
+              <td><span class="badge badge-{{ a.status }}">{{ a.get_status_display }}</span></td>
+              <td style="color:var(--text-muted);font-size:12px;">{{ a.updated_at|date:"d M Y" }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:12px;"><a href="{% url 'articles:list' %}" class="btn btn-outline btn-sm">View All Articles</a></div>
+    {% else %}
+      <p class="text-muted">No articles yet. <a href="{% url 'articles:create' %}">Create your first article</a>.</p>
+    {% endif %}
+  </div>
+
+  <!-- Publishing log -->
+  <div class="form-card">
+    <h3><i class="fa fa-history" style="color:var(--gold)"></i> Recent Activity</h3>
+    {% if recent_events %}
+      <div class="timeline">
+        {% for event in recent_events %}
+        <div class="timeline-item">
+          <div class="time">{{ event.timestamp|date:"d M Y H:i" }}</div>
+          <div class="action">
+            <strong>{{ event.get_action_display }}</strong>:
+            <a href="{% url 'articles:edit' event.article.pk %}" style="color:var(--navy);">{{ event.article.title|truncatechars:35 }}</a>
+            {% if not event.success %}<span style="color:var(--danger)"> ✗ Failed</span>{% endif %}
+          </div>
+          <div class="text-muted" style="font-size:11px;">by {{ event.performed_by }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <div style="margin-top:12px;"><a href="{% url 'history:log' %}" class="btn btn-outline btn-sm">Full Log</a></div>
+    {% else %}
+      <p class="text-muted">No activity yet.</p>
+    {% endif %}
+  </div>
+
+</div>
+
+<div style="margin-top:20px;" class="form-card">
+  <h3><i class="fa fa-rocket" style="color:var(--gold)"></i> Quick Actions</h3>
+  <div class="flex gap-3" style="flex-wrap:wrap;">
+    <a href="{% url 'articles:create' %}" class="btn btn-primary"><i class="fa fa-plus"></i> New Article</a>
+    <a href="{% url 'media_library:upload' %}" class="btn btn-outline"><i class="fa fa-upload"></i> Upload Image</a>
+    <a href="{% url 'importer:import' %}" class="btn btn-outline"><i class="fa fa-file-import"></i> Import HTML</a>
+    <a href="{% url 'categories:list' %}" class="btn btn-outline"><i class="fa fa-folder"></i> Manage Categories</a>
+    <a href="{% url 'authors:list' %}" class="btn btn-outline"><i class="fa fa-user-edit"></i> Manage Authors</a>
+    <a href="/blog.html" target="_blank" class="btn btn-gold"><i class="fa fa-external-link-alt"></i> View Blog</a>
+  </div>
+</div>
+{% endblock %}

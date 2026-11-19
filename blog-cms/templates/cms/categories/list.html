@@ -1,0 +1,40 @@
+{% extends 'cms/base.html' %}
+{% block title %}Categories — Congo Prime CMS{% endblock %}
+{% block topbar_title %}Categories{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Categories</h1></div>
+<div style="display:grid;grid-template-columns:1fr 300px;gap:20px;">
+  <div class="cms-table-wrapper">
+    <table class="cms-table">
+      <thead><tr><th>Name</th><th>Slug</th><th>Articles</th><th>Actions</th></tr></thead>
+      <tbody>
+        {% for cat in categories %}
+        <tr>
+          <td><strong>{{ cat.name }}</strong></td>
+          <td><code style="font-size:12px;">{{ cat.slug }}</code></td>
+          <td>{{ cat.articles.count }}</td>
+          <td>
+            <form method="post" action="{% url 'categories:delete' cat.pk %}" style="display:inline;" onsubmit="return confirmDelete('Delete category &quot;{{ cat.name|escapejs }}&quot;?')">
+              {% csrf_token %}
+              <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+            </form>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" class="text-center text-muted" style="padding:20px;">No categories yet.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="form-card">
+    <h3><i class="fa fa-plus"></i> New Category</h3>
+    <form method="post" action="{% url 'categories:create' %}">
+      {% csrf_token %}
+      <div class="form-group"><label>Name *</label><input type="text" name="name" class="form-control" required placeholder="e.g. Construction"></div>
+      <div class="form-group"><label>Slug (optional)</label><input type="text" name="slug" class="form-control" placeholder="auto-generated"></div>
+      <div class="form-group"><label>Description</label><textarea name="description" class="form-control" rows="2"></textarea></div>
+      <button type="submit" class="btn btn-primary w-full" style="justify-content:center;"><i class="fa fa-plus"></i> Add Category</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

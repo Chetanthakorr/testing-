@@ -1,0 +1,30 @@
+{% extends 'cms/base.html' %}
+{% block title %}Trash — Congo Prime CMS{% endblock %}
+{% block topbar_title %}Trash{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Trash</h1>
+  <a href="{% url 'articles:list' %}" class="btn btn-outline btn-sm"><i class="fa fa-arrow-left"></i> Back to Articles</a>
+</div>
+<div class="cms-table-wrapper">
+  <table class="cms-table">
+    <thead><tr><th>Title</th><th>Deleted</th><th>Actions</th></tr></thead>
+    <tbody>
+      {% for a in articles %}
+      <tr>
+        <td><strong>{{ a.title }}</strong></td>
+        <td style="font-size:12px;color:var(--text-muted);">{{ a.deleted_at|date:"d M Y H:i"|default:"—" }}</td>
+        <td>
+          <form method="post" action="{% url 'articles:restore' a.pk %}" style="display:inline;">
+            {% csrf_token %}
+            <button class="btn btn-success btn-sm"><i class="fa fa-undo"></i> Restore</button>
+          </form>
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="3" class="text-center text-muted" style="padding:30px;">Trash is empty.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+Django>=6.0,<7.0
+Pillow>=11.0
+beautifulsoup4>=4.15
+# lxml not available on this environment; html.parser used instead
+# python-slugify not available; custom slugify implemented in utils.py
+

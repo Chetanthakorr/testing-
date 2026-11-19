@@ -1,0 +1,54 @@
+{% extends 'cms/base.html' %}
+{% block title %}Import HTML — Congo Prime CMS{% endblock %}
+{% block topbar_title %}HTML Importer{% endblock %}
+{% block content %}
+<div class="page-header"><h1>Import HTML Article</h1></div>
+
+<div class="form-card">
+  <h3><i class="fa fa-file-import"></i> Import from existing HTML file</h3>
+  <p class="text-muted" style="margin-bottom:16px;">Upload an existing Congo Prime blog HTML file or paste HTML to import it as a draft article. The importer will extract the title, content and SEO fields automatically.</p>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div class="form-group">
+        <label>Upload HTML File</label>
+        <input type="file" name="html_file" class="form-control" accept=".html,.htm">
+      </div>
+      <div class="form-group">
+        <label>Or paste HTML content</label>
+        <textarea name="html_content" class="form-control" rows="4" placeholder="Paste full HTML here...">{{ raw_html }}</textarea>
+      </div>
+    </div>
+    <div class="flex gap-2" style="margin-top:8px;">
+      <button type="submit" name="action" value="preview" class="btn btn-primary"><i class="fa fa-eye"></i> Preview Extraction</button>
+    </div>
+  </form>
+</div>
+
+{% if preview_data %}
+<div class="form-card">
+  <h3><i class="fa fa-check-circle" style="color:var(--success)"></i> Preview — Review before importing</h3>
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="html_content" value="{{ preview_data.raw_html }}">
+    <input type="hidden" name="filename" value="{{ preview_data.filename }}">
+    <input type="hidden" name="action" value="import">
+
+    <div class="form-group"><label>Title</label><input type="text" name="title" class="form-control" value="{{ preview_data.title }}"></div>
+    <div class="form-group"><label>Excerpt</label><textarea name="excerpt" class="form-control" rows="2">{{ preview_data.excerpt }}</textarea></div>
+    <div class="form-group"><label>SEO Title</label><input type="text" name="seo_title" class="form-control" value="{{ preview_data.seo_title }}" maxlength="70"></div>
+    <div class="form-group"><label>Meta Description</label><textarea name="seo_description" class="form-control" rows="2" maxlength="160">{{ preview_data.seo_description }}</textarea></div>
+    <div class="form-group"><label>Canonical URL</label><input type="text" name="canonical_url" class="form-control" value="{{ preview_data.canonical_url }}"></div>
+    <div class="form-group">
+      <label>Extracted Content Preview</label>
+      <div class="ql-preview" style="max-height:300px;overflow:auto;">{{ preview_data.content|safe }}</div>
+    </div>
+    <input type="hidden" name="content" value="{{ preview_data.content }}">
+
+    <div class="alert alert-info"><i class="fa fa-info-circle"></i> Article will be saved as a Draft — you can edit further before publishing.</div>
+    <button type="submit" class="btn btn-gold btn-lg"><i class="fa fa-file-import"></i> Import as Draft</button>
+  </form>
+</div>
+{% endif %}
+{% endblock %}

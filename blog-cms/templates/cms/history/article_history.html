@@ -1,0 +1,48 @@
+{% extends 'cms/base.html' %}
+{% block title %}History: {{ article.title }} — Congo Prime CMS{% endblock %}
+{% block topbar_title %}Article History{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>History: {{ article.title|truncatechars:50 }}</h1>
+  <a href="{% url 'articles:edit' article.pk %}" class="btn btn-outline btn-sm"><i class="fa fa-edit"></i> Edit Article</a>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+  <div class="form-card">
+    <h3><i class="fa fa-code-branch"></i> Revision History</h3>
+    {% if revisions %}
+    <div class="timeline">
+      {% for rev in revisions %}
+      <div class="timeline-item">
+        <div class="time">{{ rev.changed_at|date:"d M Y H:i" }}</div>
+        <div class="action"><strong>{{ rev.note|default:"Edited" }}</strong> by {{ rev.changed_by }}</div>
+        <div class="text-muted" style="font-size:11px;">Title: {{ rev.title|truncatechars:50 }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-muted">No revisions recorded.</p>
+    {% endif %}
+  </div>
+
+  <div class="form-card">
+    <h3><i class="fa fa-broadcast-tower"></i> Publishing Events</h3>
+    {% if events %}
+    <div class="timeline">
+      {% for ev in events %}
+      <div class="timeline-item">
+        <div class="time">{{ ev.timestamp|date:"d M Y H:i" }}</div>
+        <div class="action">
+          <strong>{{ ev.get_action_display }}</strong> by {{ ev.performed_by }}
+          {% if not ev.success %}<span style="color:var(--danger)"> ✗</span>{% else %}<span style="color:var(--success)"> ✓</span>{% endif %}
+        </div>
+        {% if ev.error_message %}<div style="color:var(--danger);font-size:11px;">{{ ev.error_message }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-muted">No publishing events yet.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
